@@ -1,0 +1,1025 @@
+/* Service Mira Studio 1.3: clean editorial layout, strictly scoped to standalone templates */
+body.sm-studio-body{--sm-ink:#223740;--sm-text:#536970;--sm-blue:#1269a6;--sm-aqua:#21b8b4;--sm-pale:#f3faf9;--sm-line:#e3eae8;--sm-white:#fff;--sm-radius:17px;margin:0!important;padding:0!important;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;color:var(--sm-ink);background:white;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body.sm-studio-body *,body.sm-studio-body *::before,body.sm-studio-body *::after{box-sizing:border-box}
+body.sm-studio-body h1,body.sm-studio-body h2,body.sm-studio-body h3,body.sm-studio-body p{margin:0}
+body.sm-studio-body h1,body.sm-studio-body h2,body.sm-studio-body h3{color:var(--sm-ink);font-family:inherit;letter-spacing:-.035em;line-height:1.13}
+body.sm-studio-body a{color:inherit;text-decoration:none}
+body.sm-studio-body img{max-width:100%;height:auto}
+body.sm-studio-body button,body.sm-studio-body input,body.sm-studio-body textarea{font:inherit}
+body.sm-studio-body :focus-visible{outline:3px solid var(--sm-aqua);outline-offset:4px}
+body.sm-studio-body .sm-shell{width:min(100% - 88px,1380px);max-width:none;margin-inline:auto}
+body.sm-studio-body .sm-skip{position:absolute;z-index:1000;left:12px;top:-70px;background:white;color:var(--sm-blue);padding:10px 16px;border-radius:8px}
+body.sm-studio-body .sm-skip:focus{top:12px}
+body.sm-studio-body .sm-header{position:relative;z-index:40;background:#fff;border-bottom:1px solid #edf1f0;box-shadow:none!important}
+body.sm-studio-body .sm-header::before,body.sm-studio-body .sm-header::after{content:none!important}
+body.sm-studio-body .sm-header-inner{min-height:83px;display:flex;justify-content:space-between;align-items:center;gap:25px}
+body.sm-studio-body .sm-brand{display:inline-flex;align-items:center;gap:10px;flex:none;min-width:0}
+body.sm-studio-body .sm-brand-img{width:44px!important;height:50px!important;object-fit:contain}
+body.sm-studio-body .sm-brand-fallback{width:44px;height:48px;color:#148bb7;display:grid;place-items:center}
+body.sm-studio-body .sm-brand-text{display:flex;flex-direction:column;gap:0;color:var(--sm-ink);font-size:11.5px;line-height:1.4;letter-spacing:0}
+body.sm-studio-body .sm-brand-text strong{font-size:18px;line-height:1.2;letter-spacing:-.035em;font-weight:750}
+body.sm-studio-body .sm-brand-text span{display:flex;flex-direction:column}
+body.sm-studio-body .sm-brand-text small{font-size:10px;color:#849399;margin-top:1px}
+body.sm-studio-body .sm-nav{display:flex;align-items:center;gap:clamp(16px,2.1vw,34px)}
+body.sm-studio-body .sm-nav-link{font-size:13.5px;font-weight:600;white-space:nowrap;color:#42565c;transition:color .2s}
+body.sm-studio-body .sm-nav-link:hover{color:var(--sm-blue)}
+body.sm-studio-body .sm-mobile-toggle{display:none}
+body.sm-studio-body .sm-button{display:inline-flex;align-items:center;justify-content:center;gap:19px;white-space:nowrap;min-height:43px;padding:12px 21px;font-size:13.5px;letter-spacing:0;font-weight:700;border:1px solid transparent;border-radius:999px;box-shadow:none!important;transition:background .2s,color .2s,transform .2s}
+body.sm-studio-body .sm-button:hover{transform:translateY(-1px)}
+body.sm-studio-body .sm-button-primary{background:#166ba9;color:#fff!important}
+body.sm-studio-body .sm-button-primary:hover{background:#0c588e}
+body.sm-studio-body .sm-button-outline{background:#fff;color:var(--sm-ink)!important;border-color:#cddbdc}
+body.sm-studio-body .sm-button-outline:hover{border-color:#8baeb4;background:#f9fcfc}
+body.sm-studio-body .sm-button-large{min-height:50px;padding:13px 23px}
+body.sm-studio-body .sm-nav-cta{min-height:40px;padding:10px 18px;font-size:12.5px}
+body.sm-studio-body .sm-studio-icon{display:inline-block!important;vertical-align:middle}
+body.sm-studio-body .sm-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:10.5px;line-height:1.5;font-weight:800;letter-spacing:.16em;color:#517f89;text-transform:uppercase}
+body.sm-studio-body .sm-dot{display:inline-block;width:7px;height:7px;border-radius:100%;background:#2fc7be}
+body.sm-studio-body .sm-eyebrow-divider{color:#a9c3c5}
+body.sm-studio-body .sm-hero{background:#fff;padding:0 0 70px}
+body.sm-studio-body .sm-hero-intro{display:flex;flex-direction:column;align-items:center;max-width:950px;text-align:center;padding:72px 10px 42px}
+body.sm-studio-body .sm-hero h1{font-size:clamp(37px,4vw,64px);letter-spacing:-.055em;line-height:1.10;font-weight:770;margin:19px 0 18px}
+body.sm-studio-body .sm-hero h1 em,body.sm-studio-body .sm-about h2 em,body.sm-studio-body .sm-inquiry h2 em{font-style:normal;color:#1783a0}
+body.sm-studio-body .sm-hero-lead{font-size:16px;line-height:1.85;color:#66777d;max-width:645px}
+body.sm-studio-body .sm-actions{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:28px}
+body.sm-studio-body .sm-hero-media-wrap{position:relative}
+body.sm-studio-body .sm-hero-media{height:clamp(220px,26vw,350px);background:#eaf4f5;overflow:hidden;border-radius:20px;position:relative}
+body.sm-studio-body .sm-hero-photo{width:100%;height:100%!important;display:block;object-fit:cover;object-position:center 71%}
+body.sm-studio-body .sm-photo-missing{display:grid;place-items:center;color:#657b86;font-size:14px;text-align:center}
+body.sm-studio-body .sm-photo-caption{display:flex;align-items:center;gap:12px;position:absolute;left:24px;bottom:22px;background:#fff;border:1px solid #e9f0ef;border-radius:14px;padding:12px 19px;box-shadow:0 8px 26px rgba(24,55,71,.08)}
+body.sm-studio-body .sm-caption-mark{font-size:25px;color:#21a99f;line-height:1}
+body.sm-studio-body .sm-photo-caption strong,body.sm-studio-body .sm-photo-caption small{display:block}
+body.sm-studio-body .sm-photo-caption strong{font-size:13px;font-weight:750}
+body.sm-studio-body .sm-photo-caption small{font-size:11px;color:#768c90;margin-top:2px}
+body.sm-studio-body .sm-section{padding:83px 0}
+body.sm-studio-body .sm-section-services{background:#fbfcfb}
+body.sm-studio-body .sm-heading-row{display:flex;justify-content:space-between;align-items:flex-end;gap:50px;margin-bottom:34px}
+body.sm-studio-body h2{font-size:clamp(31px,3vw,46px);font-weight:720;line-height:1.18}
+body.sm-studio-body .sm-heading-row h2{margin-top:12px}
+body.sm-studio-body .sm-heading-row h2 span{color:#21869a}
+body.sm-studio-body .sm-heading-intro{max-width:350px;padding-bottom:5px}
+body.sm-studio-body .sm-heading-intro p{font-size:14px;line-height:1.8;color:var(--sm-text);margin-bottom:14px}
+body.sm-studio-body .sm-text-link{display:inline-flex;gap:14px;align-items:center;color:#13719a;font-size:13px;font-weight:760;transition:gap .2s}
+body.sm-studio-body .sm-text-link:hover{gap:19px}
+body.sm-studio-body .sm-service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+body.sm-studio-body .sm-service-card{min-width:0;min-height:218px;border:1px solid #e4eceb;border-radius:15px;padding:24px 25px 23px;background:white;display:flex;flex-direction:column;align-items:flex-start;transition:transform .2s,border-color .2s,box-shadow .2s;box-shadow:none!important}
+body.sm-studio-body .sm-service-card:hover{transform:translateY(-3px);border-color:#badbdc;box-shadow:0 9px 27px rgba(28,86,93,.065)!important}
+body.sm-studio-body .sm-card-top{width:100%;display:flex;justify-content:space-between;align-items:center;margin-bottom:26px}
+body.sm-studio-body .sm-card-number{font-size:11px;color:#9babad;font-weight:760}
+body.sm-studio-body .sm-card-symbol{font-size:18px;color:#5e969c;line-height:1}
+body.sm-studio-body .sm-service-card h3{font-size:21px;letter-spacing:-.035em;font-weight:750;line-height:1.27;margin-bottom:8px}
+body.sm-studio-body .sm-service-card p{font-size:13.5px;line-height:1.6;color:#6e8185}
+body.sm-studio-body .sm-service-link{display:inline-flex;align-items:center;gap:12px;color:#127e98;font-size:12.5px;font-weight:760;margin-top:auto;padding-top:15px}
+body.sm-studio-body .sm-more-services{display:flex;align-items:center;flex-wrap:wrap;gap:16px 22px;padding-top:26px}
+body.sm-studio-body .sm-more-services>span{font-size:12px;font-weight:750;color:#82999a}
+body.sm-studio-body .sm-more-services a{font-size:12.5px;color:#187ba0;font-weight:700}
+body.sm-studio-body .sm-about{background:#fff}
+body.sm-studio-body .sm-about-grid{display:grid;grid-template-columns:.98fr 1fr;gap:min(12vw,160px);align-items:start}
+body.sm-studio-body .sm-about h2{max-width:520px;margin:17px 0 24px}
+body.sm-studio-body .sm-about-copy>p{max-width:510px;font-size:15px;line-height:1.87;color:#60747a;margin-bottom:14px}
+body.sm-studio-body .sm-about-copy>.sm-text-link{margin-top:16px}
+body.sm-studio-body .sm-about-points{border-top:1px solid var(--sm-line)}
+body.sm-studio-body .sm-about-points>div{display:flex;gap:26px;padding:23px 0;border-bottom:1px solid var(--sm-line)}
+body.sm-studio-body .sm-point-no{color:#83a1a5;font-size:12px;font-weight:740;width:30px;flex:none}
+body.sm-studio-body .sm-about-points h3{font-size:18px;font-weight:725;margin-bottom:8px}
+body.sm-studio-body .sm-about-points p{font-size:13.5px;color:#687f82;line-height:1.7}
+body.sm-studio-body .sm-process{background:#f0f8f7}
+body.sm-studio-body .sm-process-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:38px}
+body.sm-studio-body .sm-process-head h2{margin-top:13px}
+body.sm-studio-body .sm-process-head>p{max-width:380px;font-size:14px;line-height:1.8;color:#677c82}
+body.sm-studio-body .sm-process-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+body.sm-studio-body .sm-process-grid article{border-top:1px solid #bed8d5;padding-top:19px}
+body.sm-studio-body .sm-step-number{display:inline-block;color:#198c99;font-size:12px;font-weight:770;margin-bottom:29px}
+body.sm-studio-body .sm-process-grid h3{font-size:20px;font-weight:750;margin-bottom:11px}
+body.sm-studio-body .sm-process-grid p{color:#647d7e;font-size:14px;line-height:1.7;max-width:340px}
+body.sm-studio-body .sm-inquiry{padding:88px 0}
+body.sm-studio-body .sm-inquiry-panel{padding:48px 54px;border-radius:18px;background:#eaf5f5;display:flex;align-items:center;justify-content:space-between;gap:32px}
+body.sm-studio-body .sm-inquiry h2{margin:10px 0 12px;font-size:clamp(30px,3vw,45px)}
+body.sm-studio-body .sm-inquiry p{font-size:14px;color:#667b80}
+body.sm-studio-body .sm-inquiry-action{display:flex;flex-direction:column;align-items:center;gap:12px}
+body.sm-studio-body .sm-inquiry-action small{color:#71898c;font-size:11px}
+body.sm-studio-body .sm-contact-mini{padding:0 0 90px;background:#fff}
+body.sm-studio-body .sm-contact-mini-inner{border-top:1px solid var(--sm-line);padding-top:46px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+body.sm-studio-body .sm-contact-mini h2{margin-top:10px;font-size:32px}
+body.sm-studio-body .sm-contact-actions{display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+body.sm-studio-body .sm-mail-link-large{font-size:18px;letter-spacing:-.02em;color:#157ba1;font-weight:750}
+body.sm-studio-body .sm-footer{padding:53px 0 23px;background:#f8faf9;border-top:1px solid #e9efed}
+body.sm-studio-body .sm-footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:6vw;padding-bottom:45px}
+body.sm-studio-body .sm-footer-brand p{max-width:340px;font-size:13px;color:#6b8083;line-height:1.75;margin:18px 0}
+body.sm-studio-body .sm-mail-link{display:inline-flex;align-items:center;gap:8px;color:#147ca2;font-size:13px;font-weight:700}
+body.sm-studio-body .sm-footer-column{display:flex;flex-direction:column;align-items:flex-start;gap:12px;min-width:0}
+body.sm-studio-body .sm-footer-column h3{font-size:12px;line-height:1.4;font-weight:790;letter-spacing:.10em;text-transform:uppercase;margin:4px 0 7px}
+body.sm-studio-body .sm-footer-column a{font-size:13px;color:#536970;line-height:1.55}
+body.sm-studio-body .sm-footer-column a:hover{color:var(--sm-blue)}
+body.sm-studio-body .sm-footer-bottom{border-top:1px solid #e2eae8;padding-top:20px;display:flex;justify-content:space-between;gap:14px;color:#71868a;font-size:11.5px}
+body.sm-studio-body .sm-footer-bottom a{display:inline-flex;align-items:center;gap:6px}
+/* Inner pages: preserve original WP content and quotation shortcode output. */
+body.sm-studio-body .sm-page-hero{background:#f3f9f8;padding:62px 0 54px}
+body.sm-studio-body .sm-page-hero h1{font-size:clamp(33px,4vw,51px);margin-top:17px;max-width:800px}
+body.sm-studio-body .sm-page-hero p{margin-top:15px;color:#667a80;max-width:680px;font-size:15px}
+body.sm-studio-body .sm-breadcrumb{font-size:12px;display:flex;align-items:center;gap:10px;margin-top:14px;color:#7f9294}
+body.sm-studio-body .sm-breadcrumb a{color:#0e6c91}
+body.sm-studio-body .sm-inner-main .sm-section{padding:55px 0 90px}
+body.sm-studio-body .sm-inner-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:66px;align-items:start}
+body.sm-studio-body .sm-entry-content{font-size:15px;line-height:1.85;color:#40585e;overflow-wrap:anywhere;min-width:0}
+body.sm-studio-body .sm-entry-content h2{font-size:26px;margin:29px 0 14px}
+body.sm-studio-body .sm-entry-content h3{font-size:20px;margin:20px 0 10px}
+body.sm-studio-body .sm-entry-content p{margin-bottom:16px}
+body.sm-studio-body .sm-entry-content ul,body.sm-studio-body .sm-entry-content ol{padding-left:23px}
+body.sm-studio-body .sm-entry-content a{color:#126da2;text-decoration:underline;text-underline-offset:3px}
+body.sm-studio-body .sm-entry-content input,body.sm-studio-body .sm-entry-content select,body.sm-studio-body .sm-entry-content textarea{max-width:100%;border-radius:10px}
+body.sm-studio-body .sm-aside-card{border:1px solid #e5edeb;padding:26px;border-radius:16px;background:#fff}
+body.sm-studio-body .sm-aside-icon{color:#149da4;margin-bottom:12px}
+body.sm-studio-body .sm-aside-card h2{font-size:22px;margin-bottom:13px}
+body.sm-studio-body .sm-aside-card p{font-size:13px;line-height:1.7;color:#657980;margin-bottom:18px}
+body.sm-studio-body .sm-aside-card .sm-button{width:100%;margin-bottom:17px}
+body.sm-studio-body .sm-quote-content{max-width:840px}
+@media(min-width:1700px){body.sm-studio-body .sm-shell{width:min(100% - 120px,1480px)}}
+@media(max-width:1100px){body.sm-studio-body .sm-shell{width:calc(100% - 60px)}body.sm-studio-body .sm-nav{gap:16px}body.sm-studio-body .sm-hero-intro{padding-top:60px}body.sm-studio-body .sm-about-grid{gap:55px}body.sm-studio-body .sm-inner-grid{gap:32px}}
+@media(max-width:760px){
+body.sm-studio-body .sm-shell{width:calc(100% - 36px)}
+body.sm-studio-body .sm-header-inner{min-height:73px}
+body.sm-studio-body .sm-brand-img{width:36px!important;height:42px!important}
+body.sm-studio-body .sm-brand-text strong{font-size:16px}
+body.sm-studio-body .sm-brand-text{font-size:10px}
+body.sm-studio-body .sm-mobile-toggle{display:inline-flex;align-items:center;gap:8px;background:#f3f8f7;border:1px solid #e0e9e7;border-radius:999px;padding:9px 13px;color:#33565d;font-size:12px;font-weight:800;cursor:pointer}
+body.sm-studio-body .sm-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;padding:12px 18px 23px;border-bottom:1px solid #e4eceb;box-shadow:0 15px 30px rgba(29,64,69,.07);flex-direction:column;gap:0;align-items:stretch;z-index:100}
+body.sm-studio-body .sm-nav.is-open{display:flex}
+body.sm-studio-body .sm-nav .sm-nav-link{font-size:14px;padding:13px 8px;border-bottom:1px solid #eef3f2}
+body.sm-studio-body .sm-nav .sm-nav-cta{align-self:flex-start;margin-top:15px}
+body.sm-studio-body .sm-hero{padding-bottom:48px}
+body.sm-studio-body .sm-hero-intro{padding:47px 5px 28px}
+body.sm-studio-body .sm-hero h1{font-size:clamp(33px,8.2vw,49px);margin:16px 0 15px;letter-spacing:-.045em}
+body.sm-studio-body .sm-hero-lead{font-size:14px;line-height:1.8}
+body.sm-studio-body .sm-actions{margin-top:22px;gap:8px}
+body.sm-studio-body .sm-actions .sm-button{font-size:12px;padding:10px 15px;min-height:46px;gap:8px}
+body.sm-studio-body .sm-hero-media{height:220px;border-radius:14px}
+body.sm-studio-body .sm-photo-caption{padding:9px 12px;left:10px;bottom:10px;gap:9px}
+body.sm-studio-body .sm-photo-caption strong{font-size:11px}
+body.sm-studio-body .sm-photo-caption small{font-size:9px}
+body.sm-studio-body .sm-caption-mark{font-size:21px}
+body.sm-studio-body .sm-section{padding:60px 0}
+body.sm-studio-body .sm-heading-row,body.sm-studio-body .sm-process-head{align-items:start;flex-direction:column;gap:15px;margin-bottom:25px}
+body.sm-studio-body h2{font-size:32px}
+body.sm-studio-body .sm-heading-intro{max-width:100%}
+body.sm-studio-body .sm-service-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+body.sm-studio-body .sm-service-card{padding:21px 17px;min-height:215px}
+body.sm-studio-body .sm-service-card h3{font-size:18px}
+body.sm-studio-body .sm-service-card p{font-size:12px}
+body.sm-studio-body .sm-about-grid{grid-template-columns:1fr;gap:30px}
+body.sm-studio-body .sm-about h2{max-width:580px}
+body.sm-studio-body .sm-process-grid{gap:15px}
+body.sm-studio-body .sm-process-grid h3{font-size:17px}
+body.sm-studio-body .sm-process-grid p{font-size:12.5px}
+body.sm-studio-body .sm-inquiry{padding:58px 0}
+body.sm-studio-body .sm-inquiry-panel{padding:30px 26px;align-items:start;flex-direction:column;gap:18px}
+body.sm-studio-body .sm-inquiry-action{align-items:flex-start}
+body.sm-studio-body .sm-contact-mini{padding-bottom:62px}
+body.sm-studio-body .sm-contact-mini-inner{align-items:flex-start;flex-direction:column}
+body.sm-studio-body .sm-contact-actions{align-items:flex-start}
+body.sm-studio-body .sm-footer-top{grid-template-columns:1.2fr 1fr;gap:34px}
+body.sm-studio-body .sm-footer-brand{grid-column:1/-1}
+body.sm-studio-body .sm-inner-grid{grid-template-columns:1fr}
+body.sm-studio-body .sm-inner-aside{max-width:500px}
+}
+@media(max-width:480px){
+body.sm-studio-body .sm-shell{width:calc(100% - 30px)}
+body.sm-studio-body .sm-hero-intro{padding-top:39px}
+body.sm-studio-body .sm-hero h1{font-size:clamp(31px,8vw,38px)}
+body.sm-studio-body .sm-eyebrow{font-size:9px;letter-spacing:.09em}
+body.sm-studio-body .sm-actions{width:100%}
+body.sm-studio-body .sm-actions .sm-button{flex:1;padding:11px 12px;white-space:normal;text-align:center}
+body.sm-studio-body .sm-hero-media{height:189px}
+body.sm-studio-body .sm-photo-caption{max-width:calc(100% - 20px)}
+body.sm-studio-body .sm-service-grid{grid-template-columns:1fr}
+body.sm-studio-body .sm-service-card{min-height:185px;padding:20px 21px}
+body.sm-studio-body .sm-card-top{margin-bottom:18px}
+body.sm-studio-body .sm-process-grid{grid-template-columns:1fr;gap:20px}
+body.sm-studio-body .sm-step-number{margin-bottom:11px}
+body.sm-studio-body .sm-process-grid article{padding-top:14px}
+body.sm-studio-body .sm-process-grid h3{font-size:19px}
+body.sm-studio-body .sm-process-grid p{font-size:13.5px}
+body.sm-studio-body .sm-inquiry-panel{padding:28px 21px}
+body.sm-studio-body .sm-inquiry h2{font-size:30px}
+body.sm-studio-body .sm-contact-mini h2{font-size:27px}
+body.sm-studio-body .sm-mail-link-large{font-size:16px}
+body.sm-studio-body .sm-footer-top{grid-template-columns:1fr 1fr;gap:27px 18px}
+body.sm-studio-body .sm-footer-column a{font-size:12px}
+body.sm-studio-body .sm-footer-bottom{flex-direction:column;gap:8px}
+body.sm-studio-body .sm-page-hero{padding:42px 0}
+}
+@media(prefers-reduced-motion:reduce){body.sm-studio-body *,body.sm-studio-body *::before,body.sm-studio-body *::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* v1.3.1: quote-specific compact layout. This is intentionally NOT applied to any
+   other WordPress page and does not alter the existing calculator markup or logic. */
+body.sm-page-quote .sm-header {border-bottom:1px solid #e7eded}
+body.sm-page-quote .sm-quote-head{padding:38px 0 30px;background:#f7fbfa;border-bottom:1px solid #e7eeec}
+body.sm-page-quote .sm-quote-head-inner{display:flex;align-items:center;justify-content:space-between;gap:34px}
+body.sm-page-quote .sm-quote-heading{min-width:0;max-width:730px}
+body.sm-page-quote .sm-quote-kicker{display:flex;align-items:center;gap:9px;flex-wrap:wrap;color:#247b85;font-size:11px;font-weight:800;letter-spacing:.095em;line-height:1.5}
+body.sm-page-quote .sm-quote-divider{opacity:.35}
+body.sm-page-quote .sm-quote-heading h1{font-size:clamp(31px,3vw,42px);line-height:1.12;letter-spacing:-.035em;margin:11px 0 10px}
+body.sm-page-quote .sm-quote-heading p{font-size:14px;line-height:1.65;color:#586f76;max-width:650px}
+body.sm-page-quote .sm-quote-help{padding-left:22px;border-left:1px solid #d9e8e6;display:flex;flex-direction:column;gap:4px;min-width:188px}
+body.sm-page-quote .sm-quote-help span{font-size:12px;color:#75888d}
+body.sm-page-quote .sm-quote-help a{font-size:13px;font-weight:750;color:#15779a;white-space:nowrap}
+body.sm-page-quote .sm-quote-section{padding:30px 0 58px;background:#fff}
+body.sm-page-quote .sm-quote-layout{max-width:1180px}
+body.sm-page-quote .sm-quote-content{max-width:100%!important;width:100%;min-width:0;font-size:14px;line-height:1.55;overflow-wrap:break-word}
+body.sm-page-quote .sm-quote-content > div:first-child{max-width:100%;min-width:0}
+body.sm-page-quote .sm-quote-content input,body.sm-page-quote .sm-quote-content select,body.sm-page-quote .sm-quote-content textarea{max-width:100%;min-width:0}
+body.sm-page-quote .sm-quote-disclaimer{border-top:1px solid #e7eded;margin:21px 0 0;padding:16px 0 0;font-size:12px;line-height:1.6;color:#697e84}
+/* Consistent measured sizing prevents theme CSS from distorting CTA arrows. */
+body.sm-page-quote .sm-nav-cta{gap:0}
+@media(max-width:760px){
+ body.sm-page-quote .sm-quote-head{padding:30px 0 25px}
+ body.sm-page-quote .sm-quote-head-inner{align-items:flex-start;flex-direction:column;gap:15px}
+ body.sm-page-quote .sm-quote-heading h1{font-size:clamp(29px,6.6vw,36px);margin:10px 0 8px}
+ body.sm-page-quote .sm-quote-help{min-width:0;border-left:0;padding:0;flex-direction:row;align-items:center;gap:10px;flex-wrap:wrap}
+ body.sm-page-quote .sm-quote-section{padding:21px 0 42px}
+ body.sm-page-quote .sm-quote-disclaimer{font-size:11px}
+}
+
+
+/* 1.3.2: Preserve natural image detail on the hero; protect against theme effects.
+   If the underlying attachment is low-resolution, supply a larger original image. */
+body.sm-studio-body .sm-hero-photo{
+    filter:none !important;
+    -webkit-filter:none !important;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+    image-rendering:auto !important;
+    transform:none !important;
+    opacity:1 !important;
+}
+
+/* v1.3.4 — Selected page clearly indicated on both desktop and mobile.
+   Scoped to Studio's own navigation, never touches WordPress theme menus. */
+body.sm-studio-body .sm-nav-link{position:relative}
+body.sm-studio-body .sm-nav-link.is-active,
+body.sm-studio-body .sm-nav-link[aria-current="page"]{color:#0e6595;font-weight:800}
+body.sm-studio-body .sm-nav-link.is-active::after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:3px;background:#20b3b3;border-radius:8px}
+body.sm-studio-body .sm-nav-cta.is-active{background:#07547f!important;outline:2px solid #20b3b3;outline-offset:3px}
+@media(max-width:760px){
+ body.sm-studio-body .sm-nav .sm-nav-link.is-active{background:#eaf7f7;color:#0b627d;padding-left:14px;border-left:3px solid #20b3b3;border-radius:4px}
+ body.sm-studio-body .sm-nav .sm-nav-link.is-active::after{content:none}
+}
+
+
+/* v1.3.5 — Contact page editorial layout. Scoped entirely to the selected
+   existing WordPress contact page; the_content() remains untouched. */
+body.sm-page-contact .sm-contact-hero{background:#f5faf9;border-bottom:1px solid #e5eeec}
+body.sm-page-contact .sm-contact-hero-inner{padding:45px 0 43px;display:flex;align-items:flex-end;justify-content:space-between;gap:30px}
+body.sm-page-contact .sm-contact-hero h1{font-size:clamp(32px,3.25vw,46px);line-height:1.1;margin:10px 0 10px;letter-spacing:-.045em}
+body.sm-page-contact .sm-contact-hero p{font-size:14.5px;line-height:1.7;color:#637780;max-width:610px}
+body.sm-page-contact .sm-contact-home{font-size:13px;color:#126d93;font-weight:700;white-space:nowrap;padding-bottom:4px;display:inline-flex;align-items:center;gap:9px}
+body.sm-page-contact .sm-contact-section{padding:52px 0 75px;background:#fff}
+body.sm-page-contact .sm-contact-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,335px);align-items:start;gap:clamp(24px,3.7vw,60px)}
+body.sm-page-contact .sm-contact-information{border:1px solid #e2ebea;border-radius:17px;background:#fff;padding:clamp(23px,3vw,43px);min-width:0}
+body.sm-page-contact .sm-contact-information > .sm-eyebrow{margin-bottom:12px}
+body.sm-page-contact .sm-contact-original{max-width:100%;font-size:15px;line-height:1.7;color:#3e555d}
+body.sm-page-contact .sm-contact-original h2{font-size:clamp(23px,2.35vw,31px);font-weight:750;line-height:1.22;letter-spacing:-.035em;margin:7px 0 25px}
+body.sm-page-contact .sm-contact-original h3{font-size:19px;margin:21px 0 10px}
+body.sm-page-contact .sm-contact-original p{margin-bottom:12px}
+body.sm-page-contact .sm-contact-original p:empty{display:none}
+body.sm-page-contact .sm-contact-original a{color:#0e6b9b;text-decoration:none;font-weight:650;overflow-wrap:anywhere}
+body.sm-page-contact .sm-contact-original a:hover{text-decoration:underline;text-underline-offset:3px}
+body.sm-page-contact .sm-contact-original em{font-style:normal}
+body.sm-page-contact .sm-contact-original :is(.has-background,.wp-block-group.has-background,.wp-block-paragraph.has-background){background:#f6faf9!important;border:0!important;border-radius:9px!important;padding:12px 15px!important;margin:10px 0!important;color:#37515a!important}
+body.sm-page-contact .sm-contact-original :is(.has-background,.wp-block-group.has-background,.wp-block-paragraph.has-background) + :is(.has-background,.wp-block-group.has-background,.wp-block-paragraph.has-background){margin-top:-6px!important}
+body.sm-page-contact .sm-contact-original [style*="background-color"]:not(a):not(button):not(input){background:#f6faf9!important}
+body.sm-page-contact .sm-contact-original p span[style*="color"]{color:inherit!important}
+body.sm-page-contact .sm-contact-action{border-radius:16px;background:#edf8f7;padding:clamp(25px,2.8vw,34px);border:1px solid #dfeeed}
+body.sm-page-contact .sm-contact-action h2{font-size:clamp(22px,2vw,26px);line-height:1.23;margin:13px 0 13px}
+body.sm-page-contact .sm-contact-action p{color:#617880;font-size:14px;line-height:1.72;margin-bottom:22px}
+body.sm-page-contact .sm-contact-action .sm-button{width:100%;white-space:normal;text-align:center;min-height:47px;gap:13px}
+@media(max-width:850px){
+ body.sm-page-contact .sm-contact-layout{grid-template-columns:1fr;gap:20px}
+ body.sm-page-contact .sm-contact-action{max-width:none}
+ body.sm-page-contact .sm-contact-hero-inner{padding:35px 0;align-items:flex-start;flex-direction:column;gap:15px}
+ body.sm-page-contact .sm-contact-section{padding:32px 0 55px}
+}
+@media(max-width:480px){
+ body.sm-page-contact .sm-contact-information{padding:24px 20px}
+ body.sm-page-contact .sm-contact-action{padding:25px 21px}
+ body.sm-page-contact .sm-contact-hero h1{font-size:34px}
+ body.sm-page-contact .sm-contact-original h2{font-size:25px;overflow-wrap:anywhere}
+}
+
+/* Keep hand-authored inline links readable and visually group the legacy
+   opening-hours paragraphs while retaining the original WordPress text. */
+body.sm-page-contact .sm-contact-original p a[href^="http"]{margin-inline-start:.28em}
+body.sm-page-contact .sm-contact-original p.has-background + p:not(.has-background){background:#f6faf9;border-radius:0 0 9px 9px;padding:12px 15px;margin-top:-10px;margin-bottom:12px}
+
+/* v1.3.6 — Dedicated services/pricing layout. Only the existing prices-page template is affected.
+ * Original WP blocks and all figures/terms remain intact, including unknown/incomplete entries. */
+body.sm-page-prices .sm-prices-hero{background:#f5faf9;border-bottom:1px solid #e6efee;padding:49px 0 45px}
+body.sm-page-prices .sm-prices-hero-inner{max-width:1180px}
+body.sm-page-prices .sm-prices-hero h1{font-size:clamp(34px,3.35vw,49px);font-weight:760;line-height:1.14;letter-spacing:-.045em;margin:12px 0 12px}
+body.sm-page-prices .sm-prices-hero h1 span{color:#168aa1}
+body.sm-page-prices .sm-prices-hero p{font-size:15px;line-height:1.75;color:#597178;max-width:690px}
+body.sm-page-prices .sm-prices-section{padding:42px 0 78px;background:white}
+body.sm-page-prices .sm-prices-shell{max-width:1180px}
+body.sm-page-prices .sm-prices-section-top{display:flex;justify-content:space-between;align-items:center;gap:25px;margin:0 0 22px}
+body.sm-page-prices .sm-prices-section-top h2{font-size:clamp(22px,2.2vw,30px);margin:7px 0 0;letter-spacing:-.04em}
+body.sm-page-prices .sm-prices-top-cta{flex-shrink:0;font-size:12px}
+body.sm-page-prices .sm-prices-original{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:15px;font-size:14px;line-height:1.6;min-width:0}
+body.sm-page-prices .sm-prices-original > :not(.sm-pricing-card){min-width:0}
+body.sm-page-prices .sm-prices-original .sm-pricing-card{border:1px solid #e1eae9;border-radius:14px;padding:21px 23px 19px;background:white;min-width:0;box-shadow:0 5px 18px rgba(20,56,65,.035)}
+body.sm-page-prices .sm-prices-original .sm-pricing-card > *{margin:0 0 11px!important;min-width:0}
+body.sm-page-prices .sm-prices-original .sm-pricing-card > :last-child{margin-bottom:0!important}
+body.sm-page-prices .sm-prices-original .sm-price-title{font-size:17px!important;font-weight:750!important;color:#193943!important;line-height:1.35!important;letter-spacing:-.02em;margin-bottom:13px!important}
+body.sm-page-prices .sm-prices-original .sm-price-subtitle{font-size:13.5px!important;font-weight:720!important;color:#52717a!important;line-height:1.4!important;padding:0 0 8px!important;border-bottom:1px solid #e8eeee;margin-bottom:10px!important}
+body.sm-page-prices .sm-prices-original .sm-price-detail{font-size:13.5px!important;line-height:1.6!important}
+body.sm-page-prices .sm-prices-original .sm-price-detail.sm-price-money{font-weight:700!important;color:#156c91!important}
+body.sm-page-prices .sm-prices-original .sm-price-detail.sm-price-money strong{color:inherit!important}
+body.sm-page-prices .sm-prices-original .sm-price-detail.sm-price-money > *{color:inherit!important}
+body.sm-page-prices .sm-prices-original :is(.has-background,.wp-block-paragraph.has-background,.wp-block-group.has-background){background:#f4f9fa!important;color:#2b4d59!important;border:1px solid #e7f0f1!important;border-radius:8px!important;padding:12px 14px!important;margin:8px 0!important;box-shadow:none!important}
+body.sm-page-prices .sm-prices-original [style*="background-color"]:not(a):not(button):not(input):not(select){background:#f4f9fa!important;color:#2b4d59!important}
+body.sm-page-prices .sm-prices-original > p,body.sm-page-prices .sm-prices-original > h2,body.sm-page-prices .sm-prices-original > h3{padding:12px 16px!important;margin:0!important;border:1px solid #e1eae9;border-radius:9px;background:#fff;min-width:0}
+body.sm-page-prices .sm-prices-original :is(h2,h3,h4){font-size:18px;line-height:1.35;letter-spacing:-.015em}
+body.sm-page-prices .sm-prices-original :is(.wp-block-columns,.wp-block-column,table,figure){max-width:100%;min-width:0;overflow-wrap:anywhere}
+body.sm-page-prices .sm-prices-original table{width:100%;border-collapse:collapse;display:block;overflow-x:auto}
+body.sm-page-prices .sm-prices-original table th,body.sm-page-prices .sm-prices-original table td{padding:9px 12px;border:1px solid #e4eceb;text-align:left}
+body.sm-page-prices .sm-prices-end{margin-top:30px;background:#eef8f7;border-radius:16px;padding:28px 30px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+body.sm-page-prices .sm-prices-end h2{font-size:24px;margin:7px 0 6px;letter-spacing:-.03em}
+body.sm-page-prices .sm-prices-end p{font-size:13px;color:#61787e;line-height:1.65}
+@media(max-width:840px){
+body.sm-page-prices .sm-prices-original{grid-template-columns:1fr}
+body.sm-page-prices .sm-prices-hero{padding:38px 0 34px}
+body.sm-page-prices .sm-prices-section{padding:32px 0 55px}
+body.sm-page-prices .sm-prices-section-top{align-items:flex-start;flex-direction:column}
+body.sm-page-prices .sm-prices-end{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:480px){
+body.sm-page-prices .sm-prices-original .sm-pricing-card{padding:18px 17px}
+body.sm-page-prices .sm-prices-hero h1{font-size:34px}
+body.sm-page-prices .sm-prices-end{padding:24px 20px}
+body.sm-page-prices .sm-prices-end .sm-button{max-width:100%;white-space:normal}
+}
+
+/* v1.3.7 — Must preserve the sequence of Gutenberg pricing blocks.
+ * Never display raw paragraphs in a 2-column grid. This fixes mismatched
+ * service-name/price pairs when the original content uses legacy blocks. */
+body.sm-page-prices .sm-prices-shell{max-width:1160px}
+body.sm-page-prices .sm-prices-original{
+ display:flex!important; flex-flow:column nowrap!important; gap:0!important;
+ width:100%; max-width:100%; min-width:0; color:#25414a;
+ font-size:14px; line-height:1.65;
+}
+body.sm-page-prices .sm-prices-original > *{width:100%;max-width:100%;min-width:0;grid-column:auto!important}
+body.sm-page-prices .sm-prices-original > .sm-pricing-card{
+ display:block!important; background:white!important; border:1px solid #dce8e8!important;
+ border-radius:12px; padding:17px 22px!important; margin:0 0 12px!important;
+ box-shadow:none!important;
+}
+body.sm-page-prices .sm-prices-original .sm-pricing-card > *{min-width:0;overflow-wrap:anywhere}
+body.sm-page-prices .sm-prices-original .sm-pricing-card .sm-price-title{
+ font-size:17px!important; color:#153943!important; font-weight:750!important; margin:0 0 8px!important;
+ padding:0!important; border:0!important; background:transparent!important;
+}
+body.sm-page-prices .sm-prices-original .sm-pricing-card .sm-price-subtitle{
+ font-size:14px!important; font-weight:700!important; color:#42636d!important;
+ padding:0!important; margin:7px 0!important; border:0!important; background:transparent!important;
+}
+body.sm-page-prices .sm-prices-original .sm-pricing-card .sm-price-detail{
+ font-size:14px!important; line-height:1.6!important; margin:5px 0!important;
+ padding:0!important; border:0!important; background:transparent!important;
+}
+body.sm-page-prices .sm-prices-original .sm-pricing-card .sm-price-money{color:#126598!important;font-weight:650!important}
+/* For unusual old blocks, leave them in one stacked readable column and in
+   unchanged order. This fallback is intentionally NOT presented as paired cards. */
+body.sm-page-prices .sm-prices-original:not(.sm-prices-enhanced) > :is(p,h2,h3,h4,div,ul,ol){
+ display:block!important; margin:0!important; border-radius:0!important;
+ padding:12px 18px!important; border:0!important;
+ border-bottom:1px solid #e7efee!important; box-shadow:none!important;
+ background:#fff!important; min-height:0!important;
+ font-family:inherit!important; font-size:14px!important; line-height:1.6!important;
+}
+body.sm-page-prices .sm-prices-original:not(.sm-prices-enhanced) > :first-child{
+ border-top:1px solid #e7efee!important; border-top-left-radius:12px!important; border-top-right-radius:12px!important;
+}
+body.sm-page-prices .sm-prices-original:not(.sm-prices-enhanced) > :last-child{
+ border-bottom-left-radius:12px!important; border-bottom-right-radius:12px!important;
+}
+body.sm-page-prices .sm-prices-original:not(.sm-prices-enhanced) > :is(h2,h3,h4){
+ font-weight:750!important; color:#173944!important; font-size:17px!important;
+}
+body.sm-page-prices .sm-prices-original:not(.sm-prices-enhanced) > :is(p,div):has(> strong,> b){font-weight:650!important}
+body.sm-page-prices .sm-prices-original:not(.sm-prices-enhanced) > .has-background{
+ background:#f1f8f9!important;color:#234651!important;
+}
+body.sm-page-prices .sm-prices-original :is(p,.wp-block-paragraph).has-background{
+ background:#f1f8f9!important;color:#234651!important;
+}
+body.sm-page-prices .sm-prices-original :is(p,div) [style*="background-color"]{
+ background:transparent!important;
+}
+body.sm-page-prices .sm-prices-original a{color:#166a9b!important;text-decoration:underline;text-underline-offset:2px}
+body.sm-page-prices .sm-prices-original p:empty{display:none!important}
+@media(max-width:600px){
+ body.sm-page-prices .sm-prices-original > .sm-pricing-card{padding:15px!important}
+ body.sm-page-prices .sm-prices-original:not(.sm-prices-enhanced) > :is(p,h2,h3,h4,div,ul,ol){padding:11px 12px!important}
+ body.sm-page-prices .sm-prices-section{padding:28px 0 50px!important}
+}
+
+
+/* ===============================================================
+   Service Mira Studio 1.4.0 — FINAL SITEWIDE PRESENTATION LAYER
+   Purpose: preserve legacy WordPress content and pricing order.
+   No theme source, shortcode calculation or original price is modified.
+   =============================================================== */
+body.sm-studio-body{--sm-ink:#193642;--sm-text:#526973;--sm-blue:#126da8;--sm-aqua:#13a5ad;--sm-pale:#f3f9f8}
+body.sm-studio-body .sm-header{border-top:0!important}
+body.sm-studio-body .sm-nav .sm-nav-link:focus-visible,body.sm-studio-body .sm-nav .sm-nav-cta:focus-visible{outline:2px solid #14b6b2;outline-offset:4px}
+body.sm-studio-body .sm-footer{border-top:1px solid #e5ecec}
+body.sm-studio-body .sm-footer-bottom{line-height:1.6}
+/* Standard content pages: compact hero, clear content column, no empty sidebar. */
+body.sm-studio-body .sm-inner-hero{background:#f5faf9;border-bottom:1px solid #e5efee}
+body.sm-studio-body .sm-inner-hero-layout{padding-block:clamp(32px,4.5vw,55px);display:flex;justify-content:space-between;align-items:end;gap:28px}
+body.sm-studio-body .sm-inner-hero h1{font-size:clamp(32px,3.5vw,48px);font-weight:770;max-width:900px;margin:11px 0 11px;line-height:1.13;overflow-wrap:anywhere}
+body.sm-studio-body .sm-inner-hero p{font-size:14px;color:#667b80;line-height:1.65}
+body.sm-studio-body .sm-inner-hero .sm-breadcrumb{margin:0 0 18px;font-size:12px;color:#6c898d}
+body.sm-studio-body .sm-inner-hero .sm-breadcrumb span[aria-hidden]{color:#afbec0}
+body.sm-studio-body .sm-inner-hero-cta{flex:0 0 auto}
+body.sm-studio-body .sm-standard-section{padding:clamp(28px,4vw,54px) 0 74px;background:#fff}
+body.sm-studio-body .sm-standard-content{max-width:1000px;margin:0 auto;color:#394f59;font-size:16px;line-height:1.75;min-width:0}
+body.sm-studio-body .sm-standard-content > :first-child{margin-top:0!important}
+body.sm-studio-body .sm-standard-content > :last-child{margin-bottom:0!important}
+body.sm-studio-body .sm-standard-content :is(h1,h2,h3,h4,h5,h6){font-family:inherit!important;color:#193642!important;line-height:1.25!important;font-style:normal;font-weight:740!important;letter-spacing:-.025em!important;background:transparent!important;padding:0!important;border:0!important;box-shadow:none!important}
+body.sm-studio-body .sm-standard-content h1{font-size:clamp(25px,3vw,37px)!important;margin:0 0 22px!important}
+body.sm-studio-body .sm-standard-content h2{font-size:clamp(22px,2.5vw,30px)!important;margin:32px 0 14px!important}
+body.sm-studio-body .sm-standard-content h3{font-size:clamp(19px,2.1vw,24px)!important;margin:25px 0 12px!important}
+body.sm-studio-body .sm-standard-content h4{font-size:17px!important;margin:21px 0 9px!important}
+body.sm-studio-body .sm-standard-content p{font-size:inherit!important;line-height:1.8!important;margin:0 0 16px!important;max-width:100%;overflow-wrap:anywhere}
+body.sm-studio-body .sm-standard-content p:empty{display:none}
+body.sm-studio-body .sm-standard-content :is(.has-background,.wp-block-group.has-background,.wp-block-paragraph.has-background){background:#f5f9f9!important;color:#274b55!important;border-radius:9px!important;padding:14px 17px!important;border:1px solid #e5eeed!important;box-shadow:none!important;margin-block:12px!important}
+body.sm-studio-body .sm-standard-content :is(p,div,section)[style*="background-color"]{background:#f5f9f9!important;color:#274b55!important}
+body.sm-studio-body .sm-standard-content a{color:#0d6e9d!important;text-underline-offset:3px;overflow-wrap:anywhere}
+body.sm-studio-body .sm-standard-content a:hover{text-decoration-thickness:2px}
+body.sm-studio-body .sm-standard-content :is(img,video,iframe){max-width:100%;height:auto;border-radius:12px}
+body.sm-studio-body .sm-standard-content :is(.wp-block-columns,.wp-block-column,.wp-block-media-text,.wp-block-group,figure){min-width:0;max-width:100%;overflow-wrap:anywhere}
+body.sm-studio-body .sm-standard-content :is(ul,ol){margin:16px 0 22px;padding-left:26px}
+body.sm-studio-body .sm-standard-content li{margin:7px 0}
+body.sm-studio-body .sm-standard-content blockquote{border-left:3px solid #20a0aa;background:#f5faf9;padding:16px 20px;margin:20px 0;border-radius:0 10px 10px 0}
+body.sm-studio-body .sm-standard-content table{width:100%;border-collapse:collapse;max-width:100%}
+body.sm-studio-body .sm-standard-content :is(th,td){padding:12px 14px;border-bottom:1px solid #e6eeee;text-align:left;vertical-align:top}
+body.sm-studio-body .sm-standard-content .wp-block-table{max-width:100%;overflow-x:auto}
+body.sm-studio-body .sm-standard-content :is(input,textarea,select){max-width:100%;min-width:0}
+body.sm-studio-body .sm-standard-bottom-cta{max-width:1000px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px 30px;margin:42px auto 0;background:#edf7f6;border:1px solid #deebe9;border-radius:17px}
+body.sm-studio-body .sm-standard-bottom-cta h2{font-size:clamp(21px,2.2vw,28px);margin:7px 0 8px}
+body.sm-studio-body .sm-standard-bottom-cta p{font-size:13px;max-width:550px;line-height:1.7;color:#57737a}
+body.sm-studio-body .sm-standard-bottom-cta .sm-button{flex:0 0 auto}
+body.sm-studio-body .sm-legal-page .sm-standard-content{max-width:860px}
+body.sm-studio-body .sm-legal-page .sm-standard-content h2{margin-top:28px!important}
+/* Pricing: never guess which paragraph belongs to which service. A clean
+   SINGLE COLUMN with clear separators preserves every old block in place. */
+body.sm-page-prices .sm-prices-section{padding:40px 0 70px!important}
+body.sm-page-prices .sm-prices-section-top{margin-bottom:17px!important}
+body.sm-page-prices .sm-prices-context{padding:13px 17px;background:#f0f8f8;color:#496873;font-size:12.5px;line-height:1.65;border-radius:9px;border:1px solid #dcebea;margin-bottom:19px!important}
+body.sm-page-prices .sm-prices-original{display:block!important;columns:initial!important;grid-template-columns:none!important;gap:0!important;max-width:100%;width:100%!important}
+body.sm-page-prices .sm-prices-original > *{display:block!important;max-width:100%!important;min-height:0!important;float:none!important;clear:both;grid-column:auto!important;box-shadow:none!important}
+body.sm-page-prices .sm-prices-original > :is(p,h2,h3,h4,div,ul,ol){padding:13px 21px!important;margin:0!important;border:0!important;border-bottom:1px solid #e5ebeb!important;border-radius:0!important;background:#fff!important;box-shadow:none!important;line-height:1.65!important;font-family:inherit!important;font-size:15px!important;overflow-wrap:anywhere}
+body.sm-page-prices .sm-prices-original > :is(h2,h3,h4){font-size:18px!important;font-weight:760!important;color:#183c49!important;padding-top:23px!important}
+body.sm-page-prices .sm-prices-original > :is(p,div).has-background,
+body.sm-page-prices .sm-prices-original > .wp-block-paragraph.has-background{background:#f3f9fa!important;color:#244c58!important}
+body.sm-page-prices .sm-prices-original > :first-child{border-top:1px solid #e5ebeb!important;border-radius:13px 13px 0 0!important}
+body.sm-page-prices .sm-prices-original > :last-child{border-radius:0 0 13px 13px!important}
+body.sm-page-prices .sm-prices-original > :is(p,div)[style*="background-color"]{background:#f3f9fa!important}
+body.sm-page-prices .sm-prices-original :is(p,div)[style*="background-color"]{background:#f3f9fa!important}
+body.sm-page-prices .sm-prices-original strong{font-weight:750}
+body.sm-page-prices .sm-prices-original > p:empty{display:none!important}
+body.sm-page-prices .sm-prices-original table{width:100%!important;overflow-x:auto;display:block}
+/* Improve content and accessibility when published page uses legacy markup. */
+body.sm-studio-body .sm-entry-content :is(a,button,input,select,textarea):focus-visible{outline:2px solid #14a5b2;outline-offset:3px}
+body.sm-studio-body .sm-entry-content :is(form,fieldset){max-width:100%;min-width:0}
+@media(max-width:900px){
+ body.sm-studio-body .sm-inner-hero-layout{flex-direction:column;align-items:flex-start;gap:16px}
+ body.sm-studio-body .sm-standard-bottom-cta{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:600px){
+ body.sm-studio-body .sm-inner-hero-layout{padding-block:30px 34px}
+ body.sm-studio-body .sm-inner-hero h1{font-size:clamp(30px,8vw,39px);margin:10px 0 9px}
+ body.sm-studio-body .sm-standard-section{padding:26px 0 45px}
+ body.sm-studio-body .sm-standard-content{font-size:14px;line-height:1.7}
+ body.sm-studio-body .sm-standard-content h2{font-size:23px!important}
+ body.sm-studio-body .sm-standard-bottom-cta{padding:22px 18px;margin-top:27px}
+ body.sm-page-prices .sm-prices-original > :is(p,h2,h3,h4,div,ul,ol){padding:12px 14px!important;font-size:14px!important}
+ body.sm-page-prices .sm-prices-original > :is(h2,h3,h4){font-size:16px!important}
+ body.sm-page-prices .sm-prices-context{font-size:12px}
+}
+
+/* Narrow-screen calculator container safety: keep existing fields and scripts,
+   but collapse a direct two-column layout when it exists. */
+@media(max-width:700px){
+ body.sm-page-quote .sm-quote-content > div:first-child:has(> :nth-child(2)){
+   grid-template-columns:minmax(0,1fr)!important;flex-direction:column!important;
+ }
+ body.sm-page-quote .sm-quote-content :is(input,select,textarea){min-width:0;max-width:100%;}
+}
+/* =====================================================================
+   Service Mira Studio 1.5.0: consistent premium page system.
+   Works only on the opt-in standalone templates. Existing WordPress content,
+   prices and shortcode form remain unchanged. No remote fonts or image calls.
+   ===================================================================== */
+body.sm-studio-body {
+  --sm-ink:#183746; --sm-text:#516b76; --sm-blue:#096fa9;
+  --sm-aqua:#22aaa9; --sm-pale:#f3faf9; --sm-line:#dfebed;
+}
+body.sm-studio-body .sm-header{border-top:0!important;box-shadow:0 1px 0 rgba(19,55,68,.045)!important}
+body.sm-studio-body .sm-header-inner{min-height:78px}
+body.sm-studio-body .sm-brand-text strong{font-size:17px}
+body.sm-studio-body .sm-nav-link{position:relative}
+body.sm-studio-body .sm-footer{background:linear-gradient(180deg,#f4faf9,#f8fcfc)!important;border-top:1px solid #dcebea}
+body.sm-studio-body .sm-footer-top{padding-top:55px}
+body.sm-studio-body .sm-footer-column a {border-radius:6px;position:relative;padding:5px 9px!important;margin-left:-9px;width:max-content;max-width:100%;transition:background .17s,color .17s}
+body.sm-studio-body .sm-footer-column a:hover{background:#e5f4f4;color:#046988!important}
+body.sm-studio-body .sm-footer-column a.is-active,body.sm-studio-body .sm-footer-column a[aria-current=page]{background:#dff2f1!important;color:#036c79!important;font-weight:800!important;box-shadow:inset 3px 0 0 #27aeae!important;text-decoration:none!important}
+body.sm-studio-body .sm-footer-bottom{border-top:1px solid #dceaea}
+/* Extra context navigation: legal and service pages not in the main menu */
+body.sm-studio-body .sm-subnav{background:#fff;border-bottom:1px solid #e5eeee}
+body.sm-studio-body .sm-subnav-inner{display:flex;gap:10px;align-items:center;min-height:49px;overflow-x:auto;scrollbar-width:thin}
+body.sm-studio-body .sm-subnav-label{font-size:11px;letter-spacing:.11em;color:#6b8990;text-transform:uppercase;font-weight:850;margin-right:12px;white-space:nowrap}
+body.sm-studio-body .sm-subnav-link{font-size:12px!important;font-weight:700!important;padding:8px 17px;border-radius:999px;color:#53707b!important;white-space:nowrap;transition:background .2s}
+body.sm-studio-body .sm-subnav-link:hover{background:#edf6f7;color:#087092!important}
+body.sm-studio-body .sm-subnav-link.is-active{background:#dceff0;color:#076f85!important;box-shadow:inset 0 0 0 1px #c6e6e8}
+body.sm-studio-body .sm-context-line{background:#f5faf9;border-bottom:1px solid #e1eceb}
+body.sm-studio-body .sm-context-line-inner{display:flex;align-items:center;gap:13px;min-height:42px;font-size:12px}
+body.sm-studio-body .sm-context-label{color:#81959b;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+body.sm-studio-body .sm-context-current{color:#126b83;font-weight:800;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+body.sm-studio-body .sm-context-line a{margin-left:auto;color:#126b83;font-weight:730;white-space:nowrap}
+body.sm-studio-body .sm-context-line a:hover{text-decoration:underline}
+/* Modern editorial heroes for linked pages, including legal content */
+body.sm-studio-body .sm-inner-hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#eefaFA 0%,#f4f9fc 59%,#ffffff 100%)!important;border-bottom:1px solid #e0eeed!important}
+body.sm-studio-body .sm-inner-hero::after{content:"";pointer-events:none;position:absolute;width:310px;height:310px;border-radius:50%;right:-65px;top:-185px;background:radial-gradient(circle,#d3efee 0%,rgba(217,246,246,0) 68%);opacity:.9}
+body.sm-studio-body .sm-inner-hero-layout{padding-block:clamp(43px,5vw,75px);position:relative;z-index:1}
+body.sm-studio-body .sm-inner-hero .sm-eyebrow{color:#208c9a}
+body.sm-studio-body .sm-inner-hero h1{font-weight:800;letter-spacing:-.047em!important;max-width:900px;font-size:clamp(34px,4vw,55px);margin:14px 0 13px}
+body.sm-studio-body .sm-inner-hero p{color:#56727a!important;font-size:15px;line-height:1.68}
+body.sm-studio-body .sm-inner-hero-cta{background:white;border-color:#b9d8d9!important}
+body.sm-studio-body .sm-standard-section{background:linear-gradient(#fff 0%,#fff 68%,#fafdfe 100%);padding:clamp(34px,4.3vw,65px) 0 84px}
+body.sm-studio-body .sm-detail-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(245px,310px);gap:clamp(26px,5vw,72px);align-items:start;max-width:1240px;margin:0 auto}
+body.sm-studio-body .sm-detail-grid .sm-standard-content{max-width:none;width:100%;min-width:0;margin:0;color:#375361;font-size:15.5px;line-height:1.79}
+body.sm-studio-body .sm-detail-grid .sm-standard-content > :first-child{margin-top:0!important}
+body.sm-studio-body .sm-content-aside{min-width:0}
+body.sm-studio-body .sm-content-aside-card{background:linear-gradient(160deg,#f3fafb 0%,#ffffff 100%);padding:27px 25px;border-radius:18px;border:1px solid #dcebed;box-shadow:0 14px 40px rgba(32,73,84,.045)}
+body.sm-studio-body .sm-content-aside-card h2{font-size:22px!important;line-height:1.18!important;margin:11px 0 16px;letter-spacing:-.04em}
+body.sm-studio-body .sm-content-aside-card p{color:#57717d;font-size:13.5px;line-height:1.75;margin:0 0 22px}
+body.sm-studio-body .sm-service-aside-card .sm-button{width:100%;font-size:12.5px;white-space:normal;min-height:45px;text-align:center}
+body.sm-studio-body .sm-aside-link{display:inline-flex;margin-top:17px;gap:9px;font-size:12.5px;font-weight:750;color:#0f7892}
+body.sm-studio-body .sm-service-prices-link{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:15px 18px;font-size:12px;font-weight:740;color:#086f93;border:1px solid #e0edef;background:#fff;border-radius:12px;margin-top:13px}
+body.sm-studio-body .sm-service-prices-link:hover{border-color:#93cdd3}
+body.sm-studio-body .sm-legal-grid{grid-template-columns:minmax(0,1fr) 258px;max-width:1235px}
+body.sm-studio-body .sm-legal-aside{position:sticky;top:24px}
+body.sm-studio-body .sm-legal-aside .sm-content-aside-card{background:#f6fafb;border:1px solid #e0eded}
+body.sm-studio-body .sm-auto-toc{display:none;flex-direction:column;max-height:min(55vh,540px);overflow-y:auto;margin:0 -8px;padding:1px 8px 6px;gap:2px}
+body.sm-studio-body .sm-has-toc .sm-auto-toc{display:flex}
+body.sm-studio-body .sm-auto-toc a{color:#476a75;font-size:12px;font-weight:650;padding:8px 10px;line-height:1.5;border-radius:8px;overflow-wrap:anywhere}
+body.sm-studio-body .sm-auto-toc a:hover,body.sm-studio-body .sm-auto-toc a:focus-visible{color:#066f8d;background:#e0f2f1}
+body.sm-studio-body .sm-auto-toc a.sm-toc-subitem{padding-left:21px;color:#6d848d;font-size:11.5px}
+body.sm-studio-body .sm-legal-links{display:flex;gap:7px;flex-wrap:wrap;border-top:1px solid #e0eceb;padding-top:17px;margin-top:15px}
+body.sm-studio-body .sm-legal-links span{display:block;width:100%;font-size:11px;font-weight:800;color:#789298;margin-bottom:6px;text-transform:uppercase;letter-spacing:.07em}
+body.sm-studio-body .sm-legal-links a{font-size:11.5px;font-weight:690;color:#226c80;background:white;border:1px solid #dfedef;padding:7px 11px;border-radius:8px}
+body.sm-studio-body .sm-legal-links a.is-active{background:#d8f0ee;border-color:#b9e0df;color:#006b7b}
+body.sm-studio-body .sm-legal-page .sm-standard-content h2{scroll-margin-top:24px;font-size:clamp(23px,2.3vw,30px)!important;line-height:1.26!important;font-weight:790!important;margin:34px 0 14px!important;letter-spacing:-.035em!important}
+body.sm-studio-body .sm-legal-page .sm-standard-content h3{scroll-margin-top:24px;font-size:clamp(17px,1.6vw,21px)!important;line-height:1.33!important;color:#196e7f!important;margin:25px 0 12px!important}
+body.sm-studio-body .sm-legal-page .sm-standard-content p{font-size:15px!important;line-height:1.83!important;color:#3c5964;margin-bottom:16px!important}
+body.sm-studio-body .sm-legal-page .sm-standard-content h2:first-child{margin-top:0!important}
+body.sm-studio-body .sm-legal-page .sm-standard-content :is(table,.wp-block-table table){width:100%;border-spacing:0;border-collapse:separate;border:1px solid #dce9e9;border-radius:13px;overflow:hidden;background:#fff;box-shadow:0 8px 30px rgba(33,85,94,.045)}
+body.sm-studio-body .sm-legal-page .sm-standard-content :is(td,th){border-color:#e1eded!important;padding:12px 17px!important;font-size:14px;vertical-align:top;overflow-wrap:anywhere}
+body.sm-studio-body .sm-legal-page .sm-standard-content tr:nth-child(even){background:#f7fbfb}
+body.sm-studio-body .sm-legal-page .sm-standard-content tr.sm-empty-legal-row{display:none}
+body.sm-studio-body .sm-legal-page .sm-standard-content a{text-decoration:underline;text-decoration-color:#b0d0d5;text-underline-offset:3px}
+body.sm-studio-body .sm-legal-page .sm-standard-content :is(ul,ol){padding-left:24px}
+body.sm-studio-body .sm-service-page .sm-standard-content h2{border-left:3px solid #2cafb4!important;padding:4px 0 4px 19px!important;margin:33px 0 18px!important}
+body.sm-studio-body .sm-service-page .sm-standard-content h3{color:#17788b!important}
+body.sm-studio-body .sm-service-page .sm-standard-content > p:first-of-type{font-size:17px!important;line-height:1.77!important;color:#43606d!important}
+body.sm-studio-body .sm-service-page .sm-standard-content :is(.has-background,.wp-block-group.has-background,.wp-block-paragraph.has-background){background:#edf8f8!important;border-left:3px solid #3fb2b5!important;padding:17px 23px!important}
+body.sm-studio-body .sm-standard-bottom-cta{max-width:1240px;background:linear-gradient(118deg,#eaf6f6,#f4fbfc)!important;border-color:#d1e9e8!important;padding:30px 36px!important;margin:44px auto 0!important}
+/* Pricing entries: original order and content preserved; new visual rhythm. */
+body.sm-page-prices .sm-prices-hero{background:linear-gradient(120deg,#edf8f8,#f7fbfc)!important}
+body.sm-page-prices .sm-prices-section{background:#fff}
+body.sm-page-prices .sm-prices-section-top h2{font-weight:785;letter-spacing:-.04em}
+body.sm-page-prices .sm-prices-context{font-size:13px!important;line-height:1.7;border-radius:12px!important;background:#eef8f9!important;border-left:3px solid #27aaad!important;padding:16px 20px!important;margin-block:14px 24px!important}
+body.sm-page-prices .sm-prices-original{border:1px solid #e0eaeb;border-radius:16px!important;overflow:hidden;background:#fff;box-shadow:0 15px 42px rgba(25,72,85,.045)}
+body.sm-page-prices .sm-prices-original > :is(p,h2,h3,h4,div,ul,ol){margin:0!important;border:0!important;border-bottom:1px solid #e7edef!important;border-radius:0!important;padding:15px 23px!important;line-height:1.7!important}
+body.sm-page-prices .sm-prices-original > :is(h2,h3,h4){color:#154a59!important;background:#f4fafb!important;font-weight:790!important;font-size:17px!important;letter-spacing:-.01em;padding-top:20px!important;padding-bottom:16px!important}
+body.sm-page-prices .sm-prices-original > :is(p,div)[style*="background-color"],body.sm-page-prices .sm-prices-original > :is(p,div).has-background{background:#f0f8fa!important}
+body.sm-page-prices .sm-prices-original > p:nth-child(4n+2):not(.has-background){background:#fcfefe!important}
+body.sm-page-prices .sm-prices-original > :last-child{border-bottom:0!important}
+body.sm-page-prices .sm-prices-original strong{font-weight:820}
+body.sm-page-prices .sm-prices-end{border-radius:17px;overflow:hidden}
+/* Responsive section navigation and compact content */
+@media(max-width:1000px){
+ body.sm-studio-body .sm-detail-grid,body.sm-studio-body .sm-legal-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+ body.sm-studio-body .sm-content-aside{position:static}
+ body.sm-studio-body .sm-service-aside{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;gap:12px}
+ body.sm-studio-body .sm-service-aside .sm-service-prices-link{margin-top:0}
+ body.sm-studio-body .sm-legal-aside{order:-1}
+ body.sm-studio-body .sm-auto-toc{max-height:195px}
+ body.sm-studio-body .sm-legal-aside .sm-content-aside-card{padding:20px}
+}
+@media(max-width:760px){
+ body.sm-studio-body .sm-footer-top{padding-top:38px}
+ body.sm-studio-body .sm-subnav-inner{min-height:47px}
+ body.sm-studio-body .sm-context-line-inner{min-height:42px;gap:7px}
+ body.sm-studio-body .sm-context-label{display:none}
+ body.sm-studio-body .sm-inner-hero-layout{padding-block:31px 38px}
+ body.sm-studio-body .sm-standard-section{padding:24px 0 52px}
+ body.sm-studio-body .sm-detail-grid .sm-standard-content{font-size:14px}
+ body.sm-studio-body .sm-service-aside{grid-template-columns:1fr}
+ body.sm-studio-body .sm-content-aside-card{padding:22px}
+ body.sm-studio-body .sm-standard-bottom-cta{padding:21px!important;margin-top:26px!important}
+ body.sm-studio-body .sm-legal-page .sm-standard-content p{font-size:14px!important}
+ body.sm-studio-body .sm-legal-page .sm-standard-content :is(td,th){padding:10px!important;font-size:12.5px!important}
+ body.sm-studio-body .sm-auto-toc{max-height:158px}
+ body.sm-studio-body .sm-footer-column a{padding:6px 8px!important}
+ body.sm-page-prices .sm-prices-original > :is(p,h2,h3,h4,div,ul,ol){padding:13px 15px!important;font-size:14px!important}
+}
+
+/* Compact, accessible legal navigation on phones: native disclosure. */
+body.sm-studio-body .sm-toc-drawer summary{display:none;cursor:pointer;color:#0e6c85;font-size:13px;font-weight:750;list-style:none;border:1px solid #c8e3e4;border-radius:9px;padding:11px 13px}
+body.sm-studio-body .sm-toc-drawer summary::-webkit-details-marker{display:none}
+@media(max-width:760px){
+ body.sm-studio-body .sm-toc-drawer summary{display:block}
+ body.sm-studio-body .sm-toc-drawer[open] .sm-auto-toc{margin-top:12px}
+ body.sm-studio-body .sm-legal-aside .sm-content-aside-card{padding:18px 20px}
+ body.sm-studio-body .sm-legal-aside .sm-content-aside-card h2{font-size:20px!important;margin-bottom:12px}
+}
+
+
+/* Service Mira Studio 1.6 — crafted service bento, intentionally distinct from generic equal cards */
+body.sm-studio-body .sm-section-services{background:radial-gradient(circle at 0 0,#edf9fb 0,transparent 35%),linear-gradient(180deg,#f7fbfd 0%,#f7fafb 100%);position:relative}
+body.sm-studio-body .sm-section-services .sm-heading-row{margin-bottom:35px;align-items:end}
+body.sm-studio-body .sm-section-services .sm-heading-row h2{font-weight:790;letter-spacing:-.05em;line-height:1.08}
+body.sm-studio-body .sm-section-services .sm-heading-intro{max-width:370px}
+body.sm-studio-body .sm-offer-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:17px;align-items:stretch}
+body.sm-studio-body .sm-offer-card{position:relative;isolation:isolate;min-width:0;min-height:257px;border:1px solid #deebee;border-radius:22px;display:flex;overflow:hidden;background:#fff;box-shadow:0 8px 24px rgba(33,88,109,.035)!important;transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease}
+body.sm-studio-body .sm-offer-card:hover{transform:translateY(-4px);border-color:#bfdce3;box-shadow:0 24px 55px rgba(28,80,101,.115)!important}
+body.sm-studio-body .sm-offer-card:focus-within{outline:3px solid #27b9ca;outline-offset:2px}
+body.sm-studio-body .sm-offer-card .sm-offer-content{display:flex;flex-direction:column;width:100%;position:relative;z-index:2;padding:25px 26px 23px}
+body.sm-studio-body .sm-offer-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;gap:12px}
+body.sm-studio-body .sm-offer-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:15px;background:#eaf6fa;color:#16768e;flex:none}
+body.sm-studio-body .sm-offer-icon svg{display:inline-block;vertical-align:middle}
+body.sm-studio-body .sm-offer-index{font-size:10px;font-weight:790;color:#9aafb7;letter-spacing:.13em;font-variant-numeric:tabular-nums}
+body.sm-studio-body .sm-offer-label{font-size:10px;letter-spacing:.12em;color:#5e99a8;font-weight:800;display:block;margin-bottom:9px}
+body.sm-studio-body .sm-offer-card h3{margin:0 0 9px;font-size:clamp(20px,1.55vw,25px);font-weight:770;letter-spacing:-.042em;line-height:1.13}
+body.sm-studio-body .sm-offer-card h3 a{color:inherit;text-decoration:none}
+body.sm-studio-body .sm-offer-card h3 a::after{content:"";position:absolute;inset:0;z-index:1}
+body.sm-studio-body .sm-offer-card p{font-size:13px;color:#617980;line-height:1.62;max-width:280px}
+body.sm-studio-body .sm-offer-action{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:24px;font-size:12.5px;font-weight:750;color:#155f81;z-index:3;position:relative;width:100%}
+body.sm-studio-body .sm-offer-arrow{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#eaf5f8;color:#19769a;font-size:18px;transition:background .2s,transform .2s}
+body.sm-studio-body .sm-offer-card:hover .sm-offer-arrow{transform:translate(2px,-2px);background:#d5edf2}
+body.sm-studio-body .sm-offer-featured{grid-column:span 7;min-height:348px;background:linear-gradient(128deg,#103e55 0%,#0b5d72 68%,#1a8795 100%);border:none;box-shadow:0 13px 38px rgba(15,77,93,.18)!important}
+body.sm-studio-body .sm-offer-featured .sm-offer-content{width:56%;padding:30px 28px 27px 33px;z-index:3}
+body.sm-studio-body .sm-offer-featured .sm-offer-card-top{margin-bottom:auto}
+body.sm-studio-body .sm-offer-featured .sm-offer-icon{background:rgba(255,255,255,.14);color:white;border:1px solid rgba(255,255,255,.15)}
+body.sm-studio-body .sm-offer-featured .sm-offer-index,body.sm-studio-body .sm-offer-featured .sm-offer-label{color:#b5dfe7}
+body.sm-studio-body .sm-offer-featured h3{font-size:clamp(27px,2.5vw,39px);color:white;margin-bottom:13px;letter-spacing:-.055em;line-height:1.08}
+body.sm-studio-body .sm-offer-featured p{color:#d4e9ee;font-size:14px;line-height:1.68;max-width:290px}
+body.sm-studio-body .sm-offer-featured .sm-offer-action{color:#fff;padding-top:23px}
+body.sm-studio-body .sm-offer-featured .sm-offer-arrow{background:white;color:#0f5871}
+body.sm-studio-body .sm-offer-featured .sm-offer-photo{position:absolute;z-index:1;right:0;top:0;bottom:0;width:49%;overflow:hidden;border-radius:0 22px 22px 0;mask-image:linear-gradient(90deg,transparent 0%,black 26%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,black 26%)}
+body.sm-studio-body .sm-offer-featured .sm-offer-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,46,62,.24),transparent 60%)}
+body.sm-studio-body .sm-offer-featured .sm-offer-photo img{width:100%;height:100%;max-width:none;object-fit:cover;object-position:center center;display:block;filter:saturate(.87)}
+body.sm-studio-body .sm-offer-featured .sm-offer-art{position:absolute;inset:0 0 0 54%;opacity:.26;transform:rotate(-12deg)}
+body.sm-studio-body .sm-offer-featured .sm-offer-art span{display:block;width:180px;height:180px;border:2px solid #d3ffff;border-radius:40px;position:absolute;right:-60px;top:-20px}
+body.sm-studio-body .sm-offer-featured .sm-offer-art span:nth-child(2){top:100px;right:40px}
+body.sm-studio-body .sm-offer-featured .sm-offer-art span:nth-child(3){top:230px;right:-60px}
+body.sm-studio-body .sm-offer-soft{grid-column:span 5;min-height:348px;border-color:#dbedec;background:linear-gradient(145deg,#e3f5f3 0%,#f2fbfa 68%,#d5ebf0 100%)}
+body.sm-studio-body .sm-offer-soft::before{content:"";pointer-events:none;position:absolute;width:250px;height:250px;right:-80px;top:20px;border:1px solid rgba(16,136,144,.17);border-radius:50%;box-shadow:0 0 0 36px rgba(27,166,172,.045),0 0 0 72px rgba(27,166,172,.035)}
+body.sm-studio-body .sm-offer-soft .sm-offer-content{padding:30px 33px 28px}
+body.sm-studio-body .sm-offer-soft .sm-offer-card-top{margin-bottom:auto}
+body.sm-studio-body .sm-offer-soft .sm-offer-icon{background:#fff;color:#0e8791;box-shadow:0 4px 14px rgba(7,85,89,.06)}
+body.sm-studio-body .sm-offer-soft h3{font-size:clamp(26px,2.4vw,35px);margin-bottom:12px;max-width:320px}
+body.sm-studio-body .sm-offer-soft p{font-size:14px;max-width:320px}
+body.sm-studio-body .sm-offer-soft .sm-offer-action{color:#155a67}
+body.sm-studio-body .sm-offer-regular{grid-column:span 3}
+body.sm-studio-body .sm-offer-regular:nth-child(4){background:linear-gradient(145deg,#fff,#f9fcff)}
+body.sm-studio-body .sm-offer-regular:nth-child(5){background:linear-gradient(145deg,#f9fcff,#f2f8ff)}
+body.sm-studio-body .sm-offer-regular:nth-child(6){background:linear-gradient(145deg,#fff,#fbfdfc)}
+body.sm-studio-body .sm-offer-regular .sm-offer-copy{margin-bottom:10px}
+body.sm-studio-body .sm-more-services{padding-top:28px;gap:12px 16px}
+body.sm-studio-body .sm-more-services>span{font-size:11px;text-transform:uppercase;letter-spacing:.09em}
+body.sm-studio-body .sm-more-services a{padding:9px 15px;border:1px solid #d8e9ed;border-radius:99px;background:#fff;color:#146a84;font-weight:750;transition:background .2s,border-color .2s}
+body.sm-studio-body .sm-more-services a:hover{background:#edf8fa;border-color:#abd8e0}
+@media(max-width:1120px){
+body.sm-studio-body .sm-offer-featured,body.sm-studio-body .sm-offer-soft{grid-column:span 6}
+body.sm-studio-body .sm-offer-featured .sm-offer-content{width:70%}
+body.sm-studio-body .sm-offer-featured .sm-offer-photo{width:48%;opacity:.65}
+body.sm-studio-body .sm-offer-regular{grid-column:span 6}
+}
+@media(max-width:760px){
+body.sm-studio-body .sm-section-services .sm-heading-row{margin-bottom:25px}
+body.sm-studio-body .sm-offer-grid{gap:12px}
+body.sm-studio-body .sm-offer-featured,body.sm-studio-body .sm-offer-soft{grid-column:span 12;min-height:315px}
+body.sm-studio-body .sm-offer-featured .sm-offer-content{width:72%}
+body.sm-studio-body .sm-offer-featured .sm-offer-photo{width:49%}
+body.sm-studio-body .sm-offer-regular{grid-column:span 6;min-height:238px}
+body.sm-studio-body .sm-offer-card .sm-offer-content{padding:23px}
+body.sm-studio-body .sm-offer-card h3{font-size:22px}
+body.sm-studio-body .sm-offer-featured h3{font-size:30px}
+}
+@media(max-width:520px){
+body.sm-studio-body .sm-offer-featured,body.sm-studio-body .sm-offer-soft,body.sm-studio-body .sm-offer-regular{grid-column:span 12}
+body.sm-studio-body .sm-offer-featured{min-height:385px}
+body.sm-studio-body .sm-offer-featured .sm-offer-content{width:100%;padding:23px 24px 155px}
+body.sm-studio-body .sm-offer-featured .sm-offer-card-top{margin-bottom:20px}
+body.sm-studio-body .sm-offer-featured .sm-offer-photo{left:0;right:0;top:auto;bottom:0;width:100%;height:175px;border-radius:0 0 21px 21px;mask-image:linear-gradient(180deg,transparent 0%,black 30%);-webkit-mask-image:linear-gradient(180deg,transparent 0%,black 30%)}
+body.sm-studio-body .sm-offer-featured .sm-offer-art{top:auto;bottom:0;height:150px;left:0;right:0}
+body.sm-studio-body .sm-offer-featured .sm-offer-copy{max-width:330px}
+body.sm-studio-body .sm-offer-featured h3{font-size:32px}
+body.sm-studio-body .sm-offer-featured p{font-size:13px}
+body.sm-studio-body .sm-offer-featured .sm-offer-action{position:absolute;bottom:22px;left:23px;width:calc(100% - 46px);padding:0;color:#fff;text-shadow:0 1px 7px rgba(0,0,0,.6)}
+body.sm-studio-body .sm-offer-featured .sm-offer-arrow{background:#fff}
+body.sm-studio-body .sm-offer-soft{min-height:270px}
+body.sm-studio-body .sm-offer-regular{min-height:206px}
+body.sm-studio-body .sm-offer-card h3{font-size:23px}
+body.sm-studio-body .sm-offer-card .sm-offer-content{padding:21px 22px}
+body.sm-studio-body .sm-offer-card-top{margin-bottom:13px}
+body.sm-studio-body .sm-offer-icon{width:43px;height:43px;border-radius:13px}
+body.sm-studio-body .sm-offer-regular .sm-offer-label{font-size:9px}
+body.sm-studio-body .sm-more-services a{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){body.sm-studio-body .sm-offer-card,body.sm-studio-body .sm-offer-arrow{transition:none!important}}
+
+
+/* v1.7.0 — refinement pass: premium service cards, no unreliable icons, elevated process section */
+body.sm-studio-body .sm-section-services{background:
+ radial-gradient(circle at 0% 0%,rgba(29,162,180,.09),transparent 32%),
+ radial-gradient(circle at 100% 0%,rgba(10,97,128,.06),transparent 28%),
+ linear-gradient(180deg,#f6fbfc 0%,#fbfdfd 100%)}
+body.sm-studio-body .sm-offer-grid{gap:20px}
+body.sm-studio-body .sm-offer-card{border-radius:24px;box-shadow:0 16px 36px rgba(21,73,89,.055)!important}
+body.sm-studio-body .sm-offer-card::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.12),transparent 38%)}
+body.sm-studio-body .sm-offer-card .sm-offer-content{padding:29px 30px 27px}
+body.sm-studio-body .sm-offer-card-top{margin-bottom:22px}
+body.sm-studio-body .sm-offer-icon{width:54px;height:54px;border-radius:18px;background:linear-gradient(180deg,#f3f9fb 0%,#e4f1f5 100%);border:1px solid #d8ebf0;box-shadow:inset 0 1px 0 rgba(255,255,255,.75);color:#114f68}
+body.sm-studio-body .sm-offer-badge{display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+body.sm-studio-body .sm-offer-index{font-size:11px;letter-spacing:.17em;color:#87a1a9}
+body.sm-studio-body .sm-offer-label{font-size:10.5px;color:#468397;letter-spacing:.16em}
+body.sm-studio-body .sm-offer-card h3{font-size:clamp(23px,1.7vw,28px);margin-bottom:12px}
+body.sm-studio-body .sm-offer-card p{font-size:14px;line-height:1.72;color:#587179}
+body.sm-studio-body .sm-offer-featured{background:linear-gradient(135deg,#0c3f56 0%,#0c5a72 56%,#117d8b 100%);min-height:372px}
+body.sm-studio-body .sm-offer-featured .sm-offer-content{padding:34px 34px 30px 36px}
+body.sm-studio-body .sm-offer-featured .sm-offer-icon{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.18);color:#fff;box-shadow:none}
+body.sm-studio-body .sm-offer-featured .sm-offer-photo::after{background:linear-gradient(90deg,rgba(8,53,68,.64) 0%,rgba(8,53,68,.18) 44%,transparent 100%),linear-gradient(0deg,rgba(6,46,62,.28),transparent 64%)}
+body.sm-studio-body .sm-offer-featured .sm-offer-action{font-size:13px}
+body.sm-studio-body .sm-offer-soft{background:linear-gradient(145deg,#edf8f8 0%,#f8fcfc 60%,#e3f1f5 100%);border-color:#d8ecef;min-height:372px}
+body.sm-studio-body .sm-offer-soft::before{width:300px;height:300px;right:-105px;top:8px;border-color:rgba(13,132,142,.12);box-shadow:0 0 0 46px rgba(27,166,172,.04),0 0 0 94px rgba(27,166,172,.028)}
+body.sm-studio-body .sm-offer-soft .sm-offer-content{padding:34px 34px 30px}
+body.sm-studio-body .sm-offer-regular{background:linear-gradient(180deg,#ffffff 0%,#f9fcfd 100%)}
+body.sm-studio-body .sm-offer-regular:nth-child(3n){background:linear-gradient(180deg,#fdfefe 0%,#f6fbfc 100%)}
+body.sm-studio-body .sm-offer-regular .sm-offer-action{padding-top:20px}
+body.sm-studio-body .sm-process{background:linear-gradient(180deg,#f4fbfa 0%,#f8fcfb 100%)}
+body.sm-studio-body .sm-process-head{align-items:end;margin-bottom:34px}
+body.sm-studio-body .sm-process-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+body.sm-studio-body .sm-process-grid article.sm-process-card{position:relative;border:1px solid #dbeaec;border-top:none;padding:24px 24px 22px;border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(247,252,252,.95) 100%);box-shadow:0 14px 32px rgba(22,66,84,.05)}
+body.sm-studio-body .sm-process-grid article.sm-process-card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;border-radius:22px 22px 0 0;background:linear-gradient(90deg,#12859a 0%,#20b6c2 100%)}
+body.sm-studio-body .sm-step-number{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:14px;background:linear-gradient(180deg,#e9f6f8 0%,#dff1f4 100%);color:#0d6e84;font-size:14px;font-weight:800;letter-spacing:.08em;margin-bottom:18px;box-shadow:inset 0 1px 0 rgba(255,255,255,.72)}
+body.sm-studio-body .sm-process-grid h3{font-size:24px;letter-spacing:-.035em;margin-bottom:10px}
+body.sm-studio-body .sm-process-grid p{font-size:14px;max-width:none;margin-bottom:18px}
+body.sm-studio-body .sm-process-meta{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:8px 12px;background:#edf7f8;color:#0b6f83;font-size:12px;font-weight:750}
+body.sm-studio-body .sm-process-meta::before{content:"";width:7px;height:7px;border-radius:50%;background:#22b2bd;display:inline-block}
+@media(max-width:1120px){
+ body.sm-studio-body .sm-process-grid{grid-template-columns:1fr 1fr}
+ body.sm-studio-body .sm-process-grid article.sm-process-card:last-child{grid-column:1/-1}
+}
+@media(max-width:760px){
+ body.sm-studio-body .sm-offer-grid{gap:14px}
+ body.sm-studio-body .sm-offer-card .sm-offer-content{padding:24px}
+ body.sm-studio-body .sm-offer-featured,body.sm-studio-body .sm-offer-soft{min-height:332px}
+ body.sm-studio-body .sm-process-grid{grid-template-columns:1fr;gap:16px}
+ body.sm-studio-body .sm-process-grid article.sm-process-card:last-child{grid-column:auto}
+ body.sm-studio-body .sm-process-grid h3{font-size:20px}
+}
+@media(max-width:520px){
+ body.sm-studio-body .sm-offer-icon{width:48px;height:48px;border-radius:16px}
+ body.sm-studio-body .sm-offer-badge{font-size:11px}
+ body.sm-studio-body .sm-process-grid article.sm-process-card{padding:22px 20px 20px;border-radius:18px}
+ body.sm-studio-body .sm-step-number{width:42px;height:42px;border-radius:13px;margin-bottom:16px}
+}
+
+
+/* v1.8.0 — NO visual icons in service cards. Removes the empty squares and
+   stray theme-scaled SVGs permanently rather than fighting WP theme SVG CSS. */
+body.sm-studio-body .sm-offer-card .sm-offer-icon,
+body.sm-studio-body .sm-offer-card .sm-offer-badge,
+body.sm-studio-body .sm-offer-card .sm-offer-content > svg,
+body.sm-studio-body .sm-offer-card .sm-offer-card-top > svg{display:none!important}
+body.sm-studio-body .sm-offer-card-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:38px!important}
+body.sm-studio-body .sm-offer-kicker{font-size:10px;font-weight:800;letter-spacing:.15em;color:#6b98a5;line-height:1.3}
+body.sm-studio-body .sm-offer-index{display:inline-block;padding:7px 10px;border-radius:8px;background:#edf5f7;color:#4d7886!important;font-size:10px;line-height:1.2;font-weight:800;letter-spacing:.14em}
+body.sm-studio-body .sm-offer-card{border-radius:21px;box-shadow:0 12px 32px rgba(19,66,83,.06)!important}
+body.sm-studio-body .sm-offer-card .sm-offer-content{padding:27px 29px 26px}
+body.sm-studio-body .sm-offer-card h3{font-weight:800;font-size:clamp(23px,1.7vw,28px);letter-spacing:-.045em}
+body.sm-studio-body .sm-offer-featured h3{font-size:clamp(29px,2.8vw,41px)}
+body.sm-studio-body .sm-offer-featured .sm-offer-content{padding:32px 32px 28px 35px}
+body.sm-studio-body .sm-offer-featured .sm-offer-kicker{color:#bbdee5}
+body.sm-studio-body .sm-offer-featured .sm-offer-index{background:rgba(255,255,255,.15);color:#e4f9fb!important}
+body.sm-studio-body .sm-offer-featured .sm-offer-card-top{margin-bottom:auto!important}
+body.sm-studio-body .sm-offer-featured .sm-offer-copy{margin-top:auto}
+body.sm-studio-body .sm-offer-soft{background:linear-gradient(140deg,#e7f5f5,#f7fbfb 62%,#edf7f8)}
+body.sm-studio-body .sm-offer-soft::before{content:none!important}
+body.sm-studio-body .sm-offer-soft .sm-offer-content{padding:32px 32px 28px}
+body.sm-studio-body .sm-offer-soft .sm-offer-card-top{margin-bottom:auto!important}
+body.sm-studio-body .sm-offer-soft .sm-offer-copy{margin-top:auto}
+body.sm-studio-body .sm-offer-regular{background:#fff!important;min-height:255px;border-color:#e1ebed}
+body.sm-studio-body .sm-offer-regular:nth-child(4){background:#fafdfe!important}
+body.sm-studio-body .sm-offer-regular:nth-child(5){background:#f5fafc!important}
+body.sm-studio-body .sm-offer-regular .sm-offer-card-top{margin-bottom:24px!important}
+body.sm-studio-body .sm-offer-regular .sm-offer-copy{margin-bottom:16px}
+body.sm-studio-body .sm-offer-card .sm-offer-arrow{background:#e4f1f5;width:34px;height:34px;font-size:18px}
+body.sm-studio-body .sm-offer-featured .sm-offer-arrow{background:#fff}
+body.sm-studio-body .sm-offer-card:hover{box-shadow:0 25px 45px rgba(21,77,97,.125)!important}
+@media(max-width:1120px){
+ body.sm-studio-body .sm-offer-featured .sm-offer-content{width:69%}
+}
+@media(max-width:760px){
+ body.sm-studio-body .sm-offer-card .sm-offer-content{padding:24px}
+ body.sm-studio-body .sm-offer-card-top{margin-bottom:24px!important}
+ body.sm-studio-body .sm-offer-featured .sm-offer-content{width:76%;padding:26px}
+ body.sm-studio-body .sm-offer-featured .sm-offer-card-top{margin-bottom:auto!important}
+}
+@media(max-width:520px){
+ body.sm-studio-body .sm-offer-featured .sm-offer-content{width:100%;padding:23px 24px 150px}
+ body.sm-studio-body .sm-offer-featured .sm-offer-card-top{margin-bottom:20px!important}
+ body.sm-studio-body .sm-offer-featured .sm-offer-copy{margin-top:0}
+ body.sm-studio-body .sm-offer-soft .sm-offer-content{padding:24px}
+ body.sm-studio-body .sm-offer-soft .sm-offer-card-top{margin-bottom:25px!important}
+ body.sm-studio-body .sm-offer-regular .sm-offer-card-top{margin-bottom:19px!important}
+ body.sm-studio-body .sm-offer-featured h3{font-size:31px}
+}
+/* v1.8.0 visual QA: keep featured description clearly legible on its dark/photo background. */
+body.sm-studio-body .sm-offer-card.sm-offer-featured .sm-offer-copy p{color:#e9f5f8!important;text-shadow:0 1px 8px rgba(6,36,49,.35)}
+
+
+/* v1.8.1 — Featured card action spans the FULL card width, not only its text column.
+   Keep the action at article level so its positioning is independent of the image/text split. */
+body.sm-studio-body .sm-offer-featured > .sm-offer-action-featured{
+ position:absolute!important;
+ inset:auto 28px 26px 35px!important;
+ left:35px!important;
+ right:28px!important;
+ bottom:26px!important;
+ display:flex!important;
+ align-items:center!important;
+ justify-content:space-between!important;
+ width:auto!important;
+ max-width:none!important;
+ margin:0!important;
+ padding:0!important;
+ z-index:6!important;
+ color:#fff!important;
+ font-size:13px;
+ font-weight:750;
+ text-shadow:0 1px 6px rgba(5,35,47,.55);
+}
+body.sm-studio-body .sm-offer-featured > .sm-offer-action-featured .sm-offer-arrow{
+ flex:none;
+ width:38px;
+ height:38px;
+ font-size:20px;
+ color:#0e617b;
+ background:#fff;
+ text-shadow:none;
+}
+@media(max-width:520px){
+ body.sm-studio-body .sm-offer-featured > .sm-offer-action-featured{
+  inset:auto 22px 20px 23px!important;
+  left:23px!important;
+  right:22px!important;
+  bottom:20px!important;
+  width:auto!important;
+ }
+ body.sm-studio-body .sm-offer-featured > .sm-offer-action-featured .sm-offer-arrow{width:40px;height:40px}
+}
+/* Reserve text clearance above the new full-width action row, so the featured
+   description can never collide with "Leistung entdecken". */
+body.sm-studio-body .sm-offer-featured .sm-offer-content{padding-bottom:100px!important}
+@media(max-width:520px){
+ body.sm-studio-body .sm-offer-featured .sm-offer-content{padding-bottom:150px!important}
+}
+
+
+/* v1.8.2 — The 01 / 06 badge belongs to the entire service CARD, not the
+   narrower text column. The badge is now a direct child of <article>. */
+body.sm-studio-body .sm-offer-card > .sm-offer-index {
+  position:absolute!important;
+  top:28px!important;
+  right:28px!important;
+  left:auto!important;
+  bottom:auto!important;
+  margin:0!important;
+  z-index:7!important;
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  white-space:nowrap;
+}
+body.sm-studio-body .sm-offer-featured > .sm-offer-index {
+  background:#f2fbfc!important;
+  color:#134f62!important;
+  box-shadow:0 2px 12px rgba(10,50,64,.13);
+}
+@media(max-width:760px){
+  body.sm-studio-body .sm-offer-card > .sm-offer-index {
+    top:23px!important;
+    right:23px!important;
+  }
+}
+@media(max-width:520px){
+  body.sm-studio-body .sm-offer-card > .sm-offer-index {
+    top:21px!important;
+    right:21px!important;
+  }
+}
+
+/* v2.0.11: Avoid splitting the contact-page heading inside a German word.
+   Keep the saved WordPress heading intact and wrap only at word boundaries. */
+body.sm-page-contact #sm-contact-h1 {
+  overflow-wrap:normal!important;
+  word-break:normal!important;
+  hyphens:none!important;
+  -webkit-hyphens:none!important;
+  min-width:0;
+}
+@media (max-width:600px) {
+  body.sm-page-contact #sm-contact-h1 {
+    font-size:clamp(23px, 6vw, 32px)!important;
+    letter-spacing:-.025em!important;
+    line-height:1.2!important;
+  }
+  body.sm-page-contact .sm-contact-hero-inner > div {min-width:0;max-width:100%;}
+}
+
+/* v2.0.12: Fix the ACTUAL contact-card WordPress content heading, rather
+   than only the separate contact hero title (#sm-contact-h1). On narrow
+   screens fit "Gebäudereinigung" on a single line without dividing words. */
+@media (max-width: 600px) {
+  body.sm-page-contact .sm-contact-information .sm-contact-original :is(h1,h2,h3,h4,.wp-block-heading) {
+    font-size: clamp(19px, 5.4vw, 23px) !important;
+    line-height: 1.25 !important;
+    letter-spacing: -.025em !important;
+    overflow-wrap: normal !important;
+    word-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+    -webkit-hyphens: none !important;
+    max-width: 100%;
+  }
+}
+
+
+/* v2.0.13 — responsive mobile refinement. Scope entirely to the Studio template. */
+@media (max-width: 800px) {
+ body.sm-studio-body .sm-mobile-toggle {min-height:44px;display:inline-flex!important;gap:9px!important;padding:9px 15px!important;background:#eef8fc!important;border:1px solid #cfe5ef!important;color:#15445c!important;box-shadow:none!important;}
+ body.sm-studio-body .sm-toggle-symbol {width:18px;height:14px;display:inline-block;position:relative;border-top:2px solid currentColor;border-bottom:2px solid currentColor;}
+ body.sm-studio-body .sm-toggle-symbol::after {content:"";position:absolute;left:0;right:0;top:5px;border-top:2px solid currentColor;}
+ body.sm-studio-body .sm-mobile-toggle[aria-expanded="true"] .sm-toggle-symbol{border:0;height:18px;}
+ body.sm-studio-body .sm-mobile-toggle[aria-expanded="true"] .sm-toggle-symbol::before,
+ body.sm-studio-body .sm-mobile-toggle[aria-expanded="true"] .sm-toggle-symbol::after{content:"";position:absolute;left:0;right:0;top:8px;border-top:2px solid currentColor;transform:rotate(45deg)}
+ body.sm-studio-body .sm-mobile-toggle[aria-expanded="true"] .sm-toggle-symbol::after{transform:rotate(-45deg)}
+ body.sm-studio-body .sm-nav.is-open {padding:10px 14px 16px!important;gap:0!important;background:white!important;box-shadow:0 13px 24px rgba(27,65,89,.12)!important;border-bottom:1px solid #dcebf0!important;}
+ body.sm-studio-body .sm-nav.is-open .sm-nav-link {min-height:44px;padding:11px 10px!important;display:flex;align-items:center;border-bottom:1px solid #e9f1f4!important;margin:0!important;border-left:0!important;border-radius:0!important;background:transparent!important;}
+ body.sm-studio-body .sm-nav.is-open .sm-nav-link.is-active {color:#087eae!important;box-shadow:inset 3px 0 0 #20adcc!important;padding-left:16px!important;}
+ body.sm-studio-body .sm-nav.is-open .sm-nav-cta {display:flex!important;align-items:center;justify-content:center;width:100%!important;max-width:100%!important;min-height:45px!important;margin-top:12px!important;}
+ body.sm-studio-body .sm-footer-top {grid-template-columns:1fr 1fr!important;column-gap:15px!important;row-gap:18px!important;padding-top:22px!important;padding-bottom:20px!important;}
+ body.sm-studio-body .sm-footer-brand {grid-column:1 / -1!important;}
+ body.sm-studio-body .sm-footer-brand p {margin:8px 0 10px!important;line-height:1.55!important;}
+ body.sm-studio-body .sm-footer-column {gap:5px!important;align-self:start!important;}
+ body.sm-studio-body .sm-footer-column h3 {margin:0 0 6px!important;}
+ body.sm-studio-body .sm-footer-column a {font-size:12px!important;line-height:1.4!important;padding:5px 0!important;margin:0!important;}
+ body.sm-studio-body .sm-footer-bottom{padding:14px 0 18px!important;gap:5px!important;}
+ body.sm-studio-body .mx-hero-buttons {display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:10px!important;max-width:340px!important;width:100%!important;}
+ body.sm-studio-body .mx-hero-buttons .mx-btn {display:flex!important;justify-content:center!important;width:100%!important;min-height:45px!important;margin:0!important;}
+ body.sm-studio-body .mx-textlink span[aria-hidden],body.sm-studio-body .mx-service-go {display:none!important;}
+ body.sm-page-contact .sm-contact-hero-inner{padding-top:26px!important;padding-bottom:23px!important;gap:8px!important;}
+ body.sm-page-contact .sm-contact-hero h1{margin:7px 0!important;}
+ body.sm-page-contact .sm-contact-home{display:none!important;}
+ body.sm-page-contact .sm-contact-section{padding-top:20px!important;padding-bottom:25px!important;}
+ body.sm-page-contact .sm-contact-information{padding:20px 16px!important;border-radius:16px!important;}
+ body.sm-page-contact .sm-contact-original{font-size:14px!important;line-height:1.55!important;}
+ body.sm-page-contact .sm-contact-original h2{margin:5px 0 13px!important;}
+ body.sm-page-contact .sm-contact-original :is(p,div){max-width:100%;} 
+ body.sm-page-contact .sm-contact-original p{margin-bottom:9px!important;}
+ body.sm-page-contact .sm-contact-original :is(.has-background,.wp-block-group.has-background,.wp-block-paragraph.has-background){margin:5px 0!important;padding:9px 12px!important;}
+ body.sm-page-contact .sm-contact-original p.has-background + p:not(.has-background){padding:9px 12px!important;margin-top:0!important;}
+ body.sm-page-prices .sm-prices-section{padding:22px 0 30px!important;}
+ body.sm-page-prices .sm-prices-original{gap:9px!important;border:0!important;box-shadow:none!important;background:transparent!important;}
+ body.sm-page-prices .sm-prices-original .sm-prv-card{box-shadow:none!important;border-radius:12px!important;}
+ body.sm-page-prices .sm-prices-original .sm-prv-card > .sm-prv-service{padding:11px 13px!important;font-size:14px!important;background:#eff8fa!important;border-left:3px solid #1599ae!important;}
+ body.sm-page-prices .sm-prices-original .sm-prv-card > .sm-prv-amount{padding:10px 13px!important;font-size:14px!important;}
+ body.sm-page-prices .sm-prices-original .sm-prv-card > .sm-prv-detail{padding:8px 13px!important;line-height:1.5!important;}
+ body.sm-page-prices .sm-prices-original .sm-prv-toggle{display:flex;align-items:center;justify-content:space-between;background:white;border:0;border-top:1px solid #e3edef;color:#087eab;font-weight:700;font-size:12px;padding:10px 13px;width:100%;cursor:pointer;}
+ body.sm-page-prices .sm-prices-original .sm-prv-toggle:focus-visible{outline:2px solid #087eab;outline-offset:-2px;}
+ body.sm-page-prices .sm-prv-card:not(.sm-prv-expanded) > .sm-prv-detail{display:none!important;}
+ /* A customer must always see the unchanged source price; only extended descriptions collapse. */
+ body.sm-page-quote .sm-quote-content{overflow:visible!important;}
+ body.sm-page-quote .sm-quote-content :is(input,select,textarea){max-width:100%;box-sizing:border-box;}
+}
+@media(max-width:400px){body.sm-studio-body .sm-shell{width:calc(100% - 28px)!important;}body.sm-page-contact .sm-contact-original a{font-size:clamp(13px,4.4vw,17px)!important;overflow-wrap:anywhere!important;}}
+/* v2.0.13 finishing touches: keep expand controls mobile-only and remove purely decorative card arrows on every viewport. */
+body.sm-page-prices .sm-prices-original .sm-prv-toggle{display:none}
+body.sm-studio-body .mx-service-go{display:none!important}
+@media(max-width:800px){body.sm-page-prices .sm-prices-original .sm-prv-toggle{display:flex!important}}

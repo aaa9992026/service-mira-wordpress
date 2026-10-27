@@ -1,0 +1,298 @@
+/* Service Mira Quotes 1.1.1 — isolated form styles. No site-wide selectors. */
+.mira-quote{--mq-navy:#163b4c;--mq-blue:#087eb4;--mq-teal:#12a9c4;--mq-ink:#17354a;--mq-muted:#687f8e;--mq-line:#daebf0;--mq-bg:#f2fbfd;--mq-shadow:0 16px 42px rgba(22,79,105,.065);font-family:Inter,"Segoe UI",system-ui,-apple-system,sans-serif;color:var(--mq-ink);background:linear-gradient(130deg,#f3fbff 0%,#fff 64%,#f1fafb 100%);border:1px solid var(--mq-line);border-radius:26px;padding:clamp(20px,3.1vw,48px);margin:20px auto 60px;max-width:1320px;isolation:isolate;box-sizing:border-box;font-size:15px;line-height:1.5}
+.mira-quote *{box-sizing:border-box}.mira-quote .mira-quote-head{margin:0 0 28px}.mira-quote h2,.mira-quote h3,.mira-quote p{margin-top:0}.mira-quote .mira-eyebrow{color:#087b9b;letter-spacing:.17em;font-weight:800;font-size:11px;display:flex;align-items:center;gap:8px}.mira-quote .mira-dot{width:9px;height:9px;border-radius:50%;background:#20b8c5;box-shadow:0 0 0 5px #dff7fa}.mira-quote .mira-heading-grid{display:flex;justify-content:space-between;gap:28px;align-items:center;margin:18px 0 24px}.mira-quote h2{font-size:clamp(31px,3.3vw,51px);line-height:1.13;letter-spacing:-.052em;font-weight:800;margin:0 0 16px;color:var(--mq-navy)}.mira-quote h2 em{font-style:normal;color:var(--mq-blue)}.mira-quote .mira-heading-grid p{font-size:15px;line-height:1.65;max-width:610px;color:var(--mq-muted);margin:0}.mira-quote .mira-heading-proof{display:flex;align-items:center;gap:13px;border:1px solid var(--mq-line);padding:14px 17px;border-radius:16px;background:#fff;box-shadow:var(--mq-shadow);flex:0 0 245px}.mira-quote .mira-proof-mark{width:40px;height:40px;display:grid;place-items:center;border-radius:13px;background:#e4f9f5;color:#0793a0;font-size:22px}.mira-quote .mira-heading-proof strong{font-size:13px;display:block}.mira-quote .mira-heading-proof small{display:block;margin-top:4px;color:var(--mq-muted);font-size:11px;line-height:1.45}.mira-quote .mira-step-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.mira-quote .mira-step-nav a{display:flex;align-items:center;gap:12px;text-decoration:none;border-radius:13px;border:1px solid #dcecf2;background:#fff;padding:11px 14px;color:#365567;font-weight:700;font-size:13px;transition:background .2s,border-color .2s}.mira-quote .mira-step-nav b{display:grid;place-items:center;min-width:31px;height:31px;border-radius:9px;background:#e6f7fc;color:var(--mq-blue);font-size:12px}.mira-quote .mira-step-nav a:hover{background:#eaf8fe;border-color:#b7e1ee}
+.mira-quote .mira-form{margin:0;background:transparent;border:0;padding:0;min-width:0;box-shadow:none;display:block}.mira-quote .mira-form-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,325px);gap:24px;align-items:start}.mira-quote .mira-form-sections{display:grid;gap:18px;min-width:0}.mira-quote .mira-section{border:1px solid var(--mq-line);background:white;margin:0;padding:26px;border-radius:20px;min-width:0;box-shadow:var(--mq-shadow)}.mira-quote .mira-section-heading{display:flex;align-items:center;gap:12px;padding:0 3px;color:var(--mq-navy);font-size:19px;font-weight:800;letter-spacing:-.025em;margin:0 0 7px;float:left;width:100%;text-transform:none;line-height:1.4}.mira-quote .mira-section-heading + *{clear:both}.mira-quote .mira-section-num{display:grid;place-items:center;background:linear-gradient(135deg,#0d80b8,#08acc0);color:white;border-radius:11px;min-width:38px;height:38px;font-size:13px;font-weight:800;letter-spacing:0}.mira-quote .mira-help-intro{color:var(--mq-muted);font-size:13px;margin:3px 0 20px}.mira-quote .mira-subtle{color:var(--mq-muted);font-size:12px;line-height:1.65;margin:13px 0 0}.mira-quote .mira-service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.mira-quote label.mira-service-choice{position:relative;display:flex;align-items:center;gap:11px;cursor:pointer;background:#fff;border:1px solid #dbe9ee;border-radius:13px;padding:13px;margin:0;min-height:70px;transition:border-color .2s,box-shadow .2s,background .2s}.mira-quote .mira-service-choice:hover{background:#f4fcff;border-color:#a9d9e9}.mira-quote .mira-service-choice input{position:absolute;opacity:0;width:1px;height:1px;inset:auto;pointer-events:none}.mira-quote .mira-service-choice:has(input:checked){border-color:#129ec4;background:#eaf9fd;box-shadow:0 0 0 2px #c0eff6}.mira-quote .mira-service-choice:has(input:focus-visible){outline:3px solid #75c8e5;outline-offset:2px}.mira-quote .mira-checkshape{display:grid;place-items:center;color:transparent;font-size:13px;font-weight:900;border:1.5px solid #b9d5e1;background:#fff;border-radius:9px;flex:0 0 30px;height:30px}.mira-quote .mira-service-choice:has(input:checked) .mira-checkshape{background:#0787b1;border-color:#0787b1;color:white}.mira-quote .mira-service-copy{min-width:0}.mira-quote .mira-service-copy strong,.mira-quote .mira-service-copy small{display:block;overflow-wrap:anywhere}.mira-quote .mira-service-copy strong{font-size:13px;line-height:1.3;color:var(--mq-ink)}.mira-quote .mira-service-copy small{margin-top:5px;font-size:11px;color:var(--mq-muted);line-height:1.3}
+.mira-quote .mira-field-stack{margin:12px 0 19px;min-width:0}.mira-quote .mira-field-stack>label{display:block;font-size:13px;font-weight:750;color:var(--mq-navy);margin:0 0 8px}.mira-quote .mira-field-stack>small{display:block;font-size:12px;color:var(--mq-muted);margin-top:8px}.mira-quote .mira-field-stack input,.mira-quote .mira-field-stack select,.mira-quote .mira-field-stack textarea{width:100%;min-height:48px;border-radius:11px;border:1px solid #cadfe8;background:#fff;color:var(--mq-ink);font:inherit;font-size:14px;padding:12px 14px;box-shadow:none}.mira-quote .mira-field-stack textarea{resize:vertical;min-height:92px}.mira-quote .mira-field-stack input:focus,.mira-quote .mira-field-stack select:focus,.mira-quote .mira-field-stack textarea:focus{border-color:#087fb5;outline:3px solid #cbeffb;outline-offset:0}.mira-quote .mira-duration-picks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.mira-quote button.mira-duration-button{min-width:0;width:100%;display:block;border-radius:11px;min-height:47px;padding:10px 3px;border:1px solid #d4e7ed;background:#f8fcfd;font-family:inherit;font-weight:750;font-size:13px;line-height:1.2;color:#31596a;cursor:pointer;margin:0;box-shadow:none}.mira-quote button.mira-duration-button:hover{border-color:#0e96b9}.mira-quote button.mira-duration-button.is-active{background:#0b7fae;color:white;border-color:#0b7fae}.mira-quote .mira-custom-duration{display:flex;gap:10px;align-items:center;margin-top:12px;color:var(--mq-muted);font-size:12px}.mira-quote .mira-custom-duration>span{flex:1}.mira-quote .mira-custom-duration input{max-width:100px;min-height:40px}.mira-quote .mira-two-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}.mira-quote .mira-frequency-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.mira-quote .mira-frequency-choice{position:relative;display:flex;align-items:center;gap:10px;border:1px solid #d4e7ed;background:#fff;border-radius:12px;min-height:69px;padding:13px;cursor:pointer;margin:0}.mira-quote .mira-frequency-choice input{accent-color:var(--mq-blue);width:18px;height:18px;flex-shrink:0;margin:0}.mira-quote .mira-frequency-choice span{display:block}.mira-quote .mira-frequency-choice strong,.mira-quote .mira-frequency-choice small{display:block}.mira-quote .mira-frequency-choice strong{font-size:13px}.mira-quote .mira-frequency-choice small{font-size:11px;color:var(--mq-muted);margin-top:3px}.mira-quote .mira-frequency-choice:has(input:checked){background:#ecfaff;border-color:#0c9ac2}
+.mira-quote .mira-summary-panel{min-width:0}.mira-quote .mira-summary-sticky{position:sticky;top:100px;border-radius:20px;background:#fff;border:1px solid var(--mq-line);box-shadow:var(--mq-shadow);overflow:hidden}.mira-quote .mira-summary-head{background:linear-gradient(135deg,#07628d,#08a0bd);color:#fff;padding:22px 23px 20px}.mira-quote .mira-summary-tag{letter-spacing:.12em;font-size:10px;font-weight:800;color:#cef3fb}.mira-quote .mira-summary-head h3{font-size:22px;color:white;line-height:1.2;margin:12px 0 7px;font-weight:800;letter-spacing:-.035em}.mira-quote .mira-summary-head p{color:#e1f9fe;font-size:12px;margin:0}.mira-quote .mira-summary-choices{padding:17px 23px;margin:0}.mira-quote .mira-summary-choices div{display:flex;gap:15px;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid #edf3f5}.mira-quote .mira-summary-choices dt{font-size:12px;color:var(--mq-muted);flex:1}.mira-quote .mira-summary-choices dd{font-size:12px;color:var(--mq-ink);font-weight:750;text-align:right;margin:0;flex:1.25;overflow-wrap:anywhere}.mira-quote .mira-price{border-radius:14px;background:#eaf9fd;padding:18px;margin:0 18px;overflow-wrap:anywhere}.mira-quote .mira-price-label{display:block;font-weight:750;font-size:12px;color:#16677f}.mira-quote .mira-price strong{display:block;font-size:26px;line-height:1.3;color:#006b9d;letter-spacing:-.04em;margin:8px 0;font-weight:850}.mira-quote .mira-price p{font-size:11px;color:#496879;margin:10px 0 0;line-height:1.6}.mira-quote .mira-price .mira-warning{color:#8c6317}.mira-quote .mira-summary-disclaimer{font-size:11px;line-height:1.65;color:var(--mq-muted);padding:0 22px;margin:16px 0}.mira-quote .mira-support{display:flex;align-items:center;gap:12px;border-top:1px solid #e7eff2;margin:0 18px;padding:16px 4px 19px}.mira-quote .mira-support-icon{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#e1f9f9;color:#078dac}.mira-quote .mira-support strong{display:block;font-size:12px}.mira-quote .mira-support small{font-size:11px;display:block;color:var(--mq-muted);margin-top:4px}.mira-quote a{color:#0079a8;text-decoration:underline;text-underline-offset:3px}.mira-quote .mira-submit-panel{border:1px solid var(--mq-line);background:#fff;border-radius:18px;box-shadow:var(--mq-shadow);margin-top:18px;padding:22px}.mira-quote .mira-check{display:flex;align-items:flex-start;gap:13px;font-size:13px;cursor:pointer;margin:0 0 16px}.mira-quote .mira-check input{width:20px;min-width:20px;height:20px;accent-color:#0e8ab1;margin:2px 0}.mira-quote button.mira-submit-button{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;border:0;border-radius:12px;background:linear-gradient(110deg,#0865a3,#0b99c3);color:white;font-size:15px;font-weight:800;min-height:53px;padding:14px 20px;cursor:pointer;box-shadow:0 8px 19px #087fac24}.mira-quote button.mira-submit-button:hover{background:#074d85}.mira-quote .mira-note{font-size:11px;color:var(--mq-muted);margin:14px 0 0}.mira-quote .mira-trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}.mira-quote button:focus-visible,.mira-quote a:focus-visible{outline:3px solid #2ebad7;outline-offset:3px}
+@media(max-width:1050px){.mira-quote .mira-form-grid{grid-template-columns:minmax(0,1fr) minmax(240px,285px);gap:16px}.mira-quote .mira-section{padding:20px}.mira-quote .mira-heading-proof{display:none}}
+@media(max-width:850px){.mira-quote .mira-form-grid{grid-template-columns:1fr}.mira-quote .mira-summary-sticky{position:static}.mira-quote .mira-summary-panel{max-width:none}.mira-quote .mira-heading-grid{display:block}}
+@media(max-width:580px){.mira-quote{margin:12px 0 30px;padding:16px 12px;border-radius:16px}.mira-quote h2{font-size:32px}.mira-quote .mira-heading-grid{margin:15px 0 22px}.mira-quote .mira-step-nav{gap:6px}.mira-quote .mira-step-nav a{flex-direction:column;gap:5px;text-align:center;font-size:10px;padding:8px 2px;line-height:1.2}.mira-quote .mira-section{padding:15px;border-radius:15px}.mira-quote .mira-section-heading{font-size:17px}.mira-quote .mira-service-grid{grid-template-columns:1fr}.mira-quote .mira-two-fields{grid-template-columns:1fr}.mira-quote .mira-duration-picks{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.mira-quote button.mira-duration-button{font-size:12px;padding:10px 1px}.mira-quote .mira-frequency-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mira-quote .mira-submit-panel{padding:18px 14px}.mira-quote .mira-custom-duration{flex-wrap:wrap}.mira-quote .mira-summary-head{padding:20px}}
+@media(prefers-reduced-motion:reduce){.mira-quote *{transition:none!important;scroll-behavior:auto!important}}
+
+/* v1.1.1: Staging-video fixes: theme collision, controls, overflow, readability. */
+body.sm-page-quote .sm-quote-content .mira-quote,
+.mira-quote { width:100%;max-width:1160px;min-width:0;margin:0 auto 34px!important;padding:clamp(16px,2.4vw,34px)!important;overflow:visible; }
+.mira-quote .mira-quote-head {position:static!important;inset:auto!important;transform:none!important;width:100%!important;max-width:100%!important;float:none!important;display:block!important;margin:0 0 22px!important;padding:0!important;background:transparent!important;box-shadow:none!important;z-index:auto!important;}
+.mira-quote .mira-heading-grid {margin:12px 0 17px!important;display:block!important;}
+body.sm-page-quote .sm-entry-content .mira-quote h2,
+.mira-quote .mira-heading-grid h2 {font-family:inherit;font-size:clamp(24px,2.5vw,34px)!important;line-height:1.18!important;margin:0 0 10px!important;letter-spacing:-.035em!important;color:#173b4d!important;font-weight:800!important;}
+.mira-quote .mira-heading-grid h2 em {color:#0789b2!important;}
+body.sm-page-quote .sm-entry-content .mira-quote .mira-heading-grid p {margin:0!important;font-size:14px!important;line-height:1.6!important;color:#597482!important;max-width:720px!important;}
+.mira-quote .mira-step-nav {position:static!important;inset:auto!important;transform:none!important;float:none!important;width:100%!important;max-width:100%!important;margin:0!important;overflow:visible!important;z-index:auto!important;}
+.mira-quote .mira-step-nav a {position:relative!important;min-width:0;min-height:45px;padding:8px 12px!important;box-shadow:none!important;outline-offset:1px;}
+.mira-quote .mira-form {position:static!important;min-width:0;width:100%!important;max-width:100%!important;}
+.mira-quote .mira-form-grid {min-width:0;width:100%;}
+.mira-quote .mira-form-sections {min-width:0;}
+.mira-quote .mira-section {width:100%;overflow:hidden;padding:clamp(16px,2vw,24px)!important;}
+body.sm-page-quote .sm-entry-content .mira-quote .mira-section-heading {position:relative!important;float:none!important;display:flex!important;margin:0 0 12px!important;padding:0!important;font-size:18px!important;line-height:1.35!important;background:transparent!important;color:#173b4d!important;max-width:100%!important;}
+body.sm-page-quote .sm-entry-content .mira-quote .mira-help-intro {font-size:13px!important;line-height:1.5!important;color:#5d7582!important;margin:0 0 16px!important;}
+.mira-quote .mira-service-choice {min-width:0!important;min-height:73px!important;}
+.mira-quote .mira-service-copy strong {font-size:14px;}
+.mira-quote .mira-service-copy small {font-size:12px;}
+/* The studio theme was painting every duration button blue, even when not selected. */
+body.sm-page-quote .sm-entry-content .mira-quote button.mira-duration-button,
+.mira-quote button.mira-duration-button {all:unset;display:flex!important;align-items:center!important;justify-content:center!important;box-sizing:border-box!important;min-width:0!important;width:100%!important;min-height:49px!important;margin:0!important;padding:8px 3px!important;background:#f7fbfd!important;color:#24465a!important;border:1px solid #c8e0ec!important;border-radius:10px!important;box-shadow:none!important;font:750 13px/1.3 Inter,'Segoe UI',system-ui,sans-serif!important;text-align:center!important;cursor:pointer!important;transition:background .16s,border-color .16s,color .16s!important;}
+body.sm-page-quote .sm-entry-content .mira-quote button.mira-duration-button:hover,
+.mira-quote button.mira-duration-button:hover {background:#e7f7fc!important;border-color:#0098be!important;color:#075e83!important;}
+body.sm-page-quote .sm-entry-content .mira-quote button.mira-duration-button.is-active,
+.mira-quote button.mira-duration-button.is-active {background:#087dad!important;border-color:#087dad!important;color:#fff!important;box-shadow:0 3px 12px rgba(7,125,173,.12)!important;}
+.mira-quote button.mira-duration-button:focus-visible {outline:3px solid #54c4df!important;outline-offset:3px!important;}
+.mira-quote .mira-custom-duration {display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:14px!important;flex-wrap:wrap!important;margin:14px 0 4px!important;}
+.mira-quote .mira-custom-duration>span {flex:0 1 auto!important;font-size:13px!important;color:#486677!important;min-width:0!important;}
+body.sm-page-quote .sm-entry-content .mira-quote .mira-custom-duration input,
+.mira-quote .mira-custom-duration input {display:block!important;flex:0 0 110px!important;width:110px!important;max-width:110px!important;min-width:105px!important;min-height:42px!important;padding:8px 12px!important;margin:0!important;font-size:14px!important;border:1px solid #bedbe7!important;border-radius:10px!important;background:white!important;color:#1e4759!important;}
+.mira-quote .mira-field-stack > label,.mira-quote .mira-subtle {line-height:1.5!important;}
+.mira-quote .mira-summary-sticky {top:88px!important;max-height:calc(100vh - 105px);overflow:auto;scrollbar-width:thin;}
+.mira-quote .mira-price {margin:0 15px!important;}
+.mira-quote .mira-price strong {font-size:clamp(20px,2.3vw,27px)!important;overflow-wrap:anywhere;}
+@media(min-width:851px) {.mira-quote .mira-form-grid{grid-template-columns:minmax(0,1fr) minmax(255px,300px);gap:18px!important}}
+@media(max-width:850px){.mira-quote .mira-summary-sticky{position:static!important;max-height:none!important;overflow:visible!important}}
+@media(max-width:580px){.mira-quote{padding:14px 11px!important;margin:0 0 25px!important;border-radius:14px!important}.mira-quote .mira-service-copy strong{font-size:13px}.mira-quote .mira-service-copy small{font-size:11px}.mira-quote .mira-step-nav{gap:5px!important}.mira-quote .mira-step-nav a{gap:5px!important;padding:8px 4px!important}.mira-quote .mira-duration-picks{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}.mira-quote .mira-frequency-grid{grid-template-columns:1fr!important}.mira-quote .mira-custom-duration>span{flex:1 1 170px!important}.mira-quote .mira-custom-duration input{flex:0 0 104px!important}}
+@media(prefers-reduced-motion:reduce){.mira-quote button.mira-duration-button{transition:none!important}}
+
+/* Semantic headings inside cards: prevent fieldset legends sitting on the top borders. */
+body.sm-page-quote .sm-entry-content .mira-quote .mira-section .mira-section-heading,
+.mira-quote .mira-section .mira-section-heading {position:static!important;float:none!important;width:auto!important;display:flex!important;align-items:center!important;gap:11px!important;padding:0 0 14px!important;margin:0 0 10px!important;background:transparent!important;color:#173b4d!important;font:800 19px/1.35 Inter,'Segoe UI',system-ui,sans-serif!important;letter-spacing:-.02em!important;}
+.mira-quote .mira-section{scroll-margin-top:90px;}
+@media(max-width:580px){body.sm-page-quote .sm-entry-content .mira-quote .mira-section .mira-section-heading,.mira-quote .mira-section .mira-section-heading{font-size:17px!important}}
+
+
+/* v1.1.2 — Contact section: compact fields and connected consent/submit area.
+   Scope only the quotation contact step; do not change calculator or acceptance UI. */
+.mira-quote .mira-contact-section{
+  padding:clamp(18px,2.05vw,26px)!important;
+  border-color:#d8eaf0;
+  background:linear-gradient(180deg,#fff 0%,#fff 78%,#fbfeff 100%);
+}
+.mira-quote .mira-contact-heading-row {margin:0 0 19px;}
+body.sm-page-quote .sm-entry-content .mira-quote .mira-contact-section .mira-section-heading,
+.mira-quote .mira-contact-section .mira-section-heading{margin:0 0 7px!important;padding:0!important;}
+.mira-quote .mira-contact-intro {font-size:13px!important;line-height:1.5!important;color:#66818e!important;margin:0 0 0!important;padding-left:49px;}
+.mira-quote .mira-contact-fields {column-gap:15px;row-gap:12px;margin-bottom:15px;}
+.mira-quote .mira-contact-section .mira-field-stack {margin:0!important;min-width:0;}
+.mira-quote .mira-contact-section .mira-field-stack>label {margin:0 0 7px!important;font-size:12.5px!important;line-height:1.35!important;letter-spacing:0!important;}
+body.sm-page-quote .sm-entry-content .mira-quote .mira-contact-section .mira-field-stack input,
+body.sm-page-quote .sm-entry-content .mira-quote .mira-contact-section .mira-field-stack textarea,
+.mira-quote .mira-contact-section .mira-field-stack input,
+.mira-quote .mira-contact-section .mira-field-stack textarea{display:block;width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box!important;border:1px solid #cfe2ea!important;background:#fff!important;border-radius:11px!important;box-shadow:none!important;margin:0!important;color:#17354a!important;font:400 14px/1.5 Inter,'Segoe UI',system-ui,sans-serif!important;}
+body.sm-page-quote .sm-entry-content .mira-quote .mira-contact-section .mira-field-stack input,
+.mira-quote .mira-contact-section .mira-field-stack input{height:45px!important;min-height:45px!important;max-height:45px!important;padding:10px 13px!important;}
+body.sm-page-quote .sm-entry-content .mira-quote .mira-contact-section .mira-field-stack textarea,
+.mira-quote .mira-contact-section .mira-field-stack textarea{height:66px!important;min-height:66px!important;max-height:140px!important;padding:11px 13px!important;resize:vertical!important;}
+.mira-quote .mira-contact-section .mira-field-stack input:focus,
+.mira-quote .mira-contact-section .mira-field-stack textarea:focus {border-color:#1599bd!important;outline:3px solid #ddf6fa!important;}
+.mira-quote .mira-contact-full {margin:0 0 15px!important;}
+.mira-quote .mira-contact-full + .mira-contact-full{margin-top:0!important;}
+.mira-quote .mira-contact-submit{padding:17px 0 0!important;margin:19px 0 0!important;background:transparent!important;box-shadow:none!important;border:0!important;border-top:1px solid #dcebf0!important;border-radius:0!important;}
+.mira-quote .mira-contact-final-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(230px,280px);gap:18px;align-items:center;}
+.mira-quote .mira-contact-final-row .mira-check {display:flex!important;gap:10px;align-items:flex-start;min-width:0;margin:0!important;color:#37586a;font-size:12px!important;line-height:1.5!important;}
+.mira-quote .mira-contact-final-row .mira-check input {flex:0 0 18px!important;width:18px!important;height:18px!important;margin:1px 0 0!important;min-width:18px!important;accent-color:#0988ad!important;}
+.mira-quote .mira-contact-final-row .mira-check span{min-width:0;overflow-wrap:anywhere;}
+body.sm-page-quote .sm-entry-content .mira-quote .mira-contact-final-row button.mira-submit-button,
+.mira-quote .mira-contact-final-row button.mira-submit-button{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:12px!important;min-width:0!important;width:100%!important;min-height:49px!important;margin:0!important;padding:12px 14px!important;border-radius:12px!important;background:linear-gradient(105deg,#076da7,#0795b8)!important;border:0!important;color:#fff!important;text-align:left!important;font:750 12px/1.35 Inter,'Segoe UI',system-ui,sans-serif!important;cursor:pointer!important;box-shadow:0 8px 18px rgba(4,105,151,.13)!important;white-space:normal!important;}
+.mira-quote .mira-contact-final-row .mira-submit-button span {flex:0 0 auto;}
+.mira-quote .mira-contact-final-row button.mira-submit-button:hover{background:#055c8c!important;}
+.mira-quote .mira-contact-submit .mira-note {margin:12px 0 0!important;color:#738b97!important;font-size:11px!important;line-height:1.5!important;max-width:100%!important;}
+@media(max-width:1200px){.mira-quote .mira-contact-final-row{grid-template-columns:1fr;gap:12px;}.mira-quote .mira-contact-final-row button.mira-submit-button{max-width:none;}}
+@media(max-width:580px){
+ .mira-quote .mira-contact-section{padding:17px 15px!important;}
+ .mira-quote .mira-contact-heading-row{margin-bottom:16px;}
+ .mira-quote .mira-contact-intro{padding-left:0;}
+ .mira-quote .mira-contact-fields{row-gap:12px;margin-bottom:13px;}
+ .mira-quote .mira-contact-full{margin-bottom:13px!important;}
+ .mira-quote .mira-contact-submit{margin-top:15px!important;padding-top:14px!important;}
+ .mira-quote .mira-contact-final-row{grid-template-columns:1fr;gap:13px;}
+ body.sm-page-quote .sm-entry-content .mira-quote .mira-contact-final-row button.mira-submit-button,
+ .mira-quote .mira-contact-final-row button.mira-submit-button{min-height:52px!important;font-size:13px!important;}
+}
+/* Keep a clear rhythm between full-width address and notes fields. */
+.mira-quote .mira-contact-section .mira-contact-full {margin:0 0 14px!important;}
+.mira-quote .mira-contact-section .mira-contact-full:last-of-type {margin-bottom:0!important;}
+
+
+/* ===== v1.1.3 / comfortable one-pass layout =====
+   The STICKY GRID ITEM must be the aside itself, not its short child.
+   All styling is scoped to the quote component; business rules unchanged. */
+@media (min-width: 951px) {
+  .mira-quote .mira-form-grid {
+    display: grid!important;
+    grid-template-columns: minmax(0,1fr) minmax(285px,330px)!important;
+    gap: clamp(22px,2.3vw,34px)!important;
+    align-items:stretch!important;
+  }
+  .mira-quote .mira-summary-panel {
+    position: sticky!important;
+    top: 94px!important;
+    align-self: start!important;
+    height: max-content!important;
+    min-width:0!important;
+    z-index:5;
+  }
+  .mira-quote .mira-summary-sticky {
+    position:relative!important;
+    top:auto!important;
+    max-height:calc(100vh - 114px)!important;
+    max-height:calc(100dvh - 114px)!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    overscroll-behavior:contain;
+    scrollbar-width:thin;
+    scrollbar-color:#c4dbe5 transparent;
+  }
+}
+@media(min-width:951px) and (max-height:650px) {
+  .mira-quote .mira-summary-panel{top:70px!important}
+  .mira-quote .mira-summary-sticky{max-height:calc(100vh - 84px)!important}
+}
+
+/* Give content room to breathe without the nested box/border appearance. */
+body.sm-page-quote .sm-entry-content .mira-quote,
+.mira-quote{
+  width:100%!important;
+  max-width:1400px!important;
+  padding:clamp(18px,2.4vw,34px)!important;
+  margin:18px auto 44px!important;
+  border:0!important;
+  border-radius:20px!important;
+  background:linear-gradient(135deg,#f5fbfd 0%,#f7fcfd 56%,#f5fafb 100%)!important;
+  box-shadow:none!important;
+}
+.mira-quote .mira-quote-head{margin-bottom:22px!important}
+.mira-quote .mira-heading-grid{margin:14px 0 22px!important}
+.mira-quote h2{font-size:clamp(29px,3vw,43px)!important;letter-spacing:-.045em!important}
+.mira-quote .mira-step-nav{gap:9px!important}
+.mira-quote .mira-step-nav a{box-shadow:none!important;border-color:#e5edf1!important;transition:background .16s ease,border-color .16s ease!important}
+.mira-quote .mira-form-sections{gap:18px!important}
+.mira-quote .mira-section,
+.mira-quote .mira-contact-section{
+  border:0!important;
+  padding:clamp(19px,2.15vw,29px)!important;
+  border-radius:18px!important;
+  box-shadow:0 8px 22px rgba(22,79,105,.045)!important;
+  background:#fff!important;
+}
+.mira-quote .mira-contact-fields{row-gap:14px!important}
+.mira-quote .mira-contact-submit{border-top:1px solid #eef3f5!important;margin-top:18px!important;padding-top:16px!important}
+.mira-quote .mira-service-choice,.mira-quote .mira-frequency-choice{box-shadow:none!important;border:1px solid #e1eaf0!important}
+.mira-quote .mira-service-choice:has(input:checked),.mira-quote .mira-frequency-choice:has(input:checked){border-color:#0e9fbe!important;box-shadow:0 0 0 1px rgba(6,160,195,.24)!important}
+
+/* One simple summary surface; not separate heavy nested boxes. */
+.mira-quote .mira-summary-sticky{
+  border-radius:18px!important;
+  border:1px solid #e1edf0!important;
+  box-shadow:0 12px 30px rgba(22,74,100,.08)!important;
+  background:#fff!important;
+}
+.mira-quote .mira-summary-head{padding:18px 20px!important;background:linear-gradient(110deg,#0a6a94,#0a96b1)!important}
+.mira-quote .mira-summary-head h3{font-size:20px!important;margin:7px 0 5px!important}
+.mira-quote .mira-summary-head p{font-size:11px!important}
+.mira-quote .mira-summary-choices{padding:11px 20px 7px!important}
+.mira-quote .mira-summary-choices div{padding:8px 0!important}
+.mira-quote .mira-summary-choices dt,.mira-quote .mira-summary-choices dd{font-size:11.5px!important}
+.mira-quote .mira-price{
+  margin:0 20px!important;
+  padding:13px 0 10px!important;
+  border:0!important;
+  border-radius:0!important;
+  border-top:1px solid #e8eef1!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.mira-quote .mira-price strong{font-size:28px!important;margin:4px 0!important;line-height:1.2!important;color:#087cb3!important}
+.mira-quote .mira-price p{margin:5px 0 0!important;line-height:1.45!important;font-size:10.5px!important}
+.mira-quote .mira-price .mira-warning{color:#8c621d!important}
+.mira-quote .mira-summary-disclaimer{margin:6px 20px 8px!important;padding:0!important;font-size:10px!important;line-height:1.5!important}
+.mira-quote .mira-support{margin:0 20px!important;padding:10px 0 13px!important;gap:9px!important}
+.mira-quote .mira-support small{font-size:10px!important}
+.mira-quote .mira-support-icon{flex:0 0 28px!important;width:28px!important;height:28px!important}
+
+/* Tablet and mobile: no competing sticky panel, one continuous easy-to-scan form. */
+@media(max-width:950px){
+  .mira-quote .mira-form-grid{display:flex!important;flex-direction:column!important;gap:16px!important}
+  .mira-quote .mira-form-sections,.mira-quote .mira-summary-panel{width:100%!important;min-width:0!important}
+  .mira-quote .mira-summary-panel,.mira-quote .mira-summary-sticky{position:static!important;top:auto!important;max-height:none!important;overflow:visible!important}
+  .mira-quote .mira-summary-panel{order:2!important}
+}
+@media(max-width:600px){
+  body.sm-page-quote .sm-entry-content .mira-quote,.mira-quote{padding:14px 10px!important;margin:0 auto 20px!important;border-radius:0!important}
+  .mira-quote .mira-section,.mira-quote .mira-contact-section{padding:19px 15px!important;border-radius:14px!important}
+  .mira-quote .mira-form-sections{gap:13px!important}
+  .mira-quote .mira-heading-grid{margin:10px 0 18px!important}
+  .mira-quote .mira-contact-final-row{gap:12px!important}
+  .mira-quote .mira-submit-button{min-height:51px!important}
+  .mira-quote .mira-summary-head{padding:15px 17px!important}
+}
+@media (prefers-reduced-motion:reduce){.mira-quote *, .mira-quote *:before,.mira-quote *:after{scroll-behavior:auto!important;transition:none!important}}
+
+/* v1.2.4: a SINGLE joined input and calendar action, no separated boxes. */
+.mira-quote .mira-german-date {
+  display:flex!important; align-items:stretch!important; gap:0!important;
+  position:relative!important; width:100%!important; min-width:0!important;
+  height:50px!important; overflow:visible!important;
+  background:#fff!important; border:1px solid #cbdfea!important;
+  border-radius:12px!important; box-sizing:border-box!important;
+  transition:border-color .15s,box-shadow .15s!important;
+}
+.mira-quote .mira-german-date:focus-within{border-color:#0d8fba!important;box-shadow:0 0 0 3px rgba(11,139,184,.13)!important}
+.mira-quote .mira-field-stack .mira-german-date input#mira-date {
+  display:block!important;flex:1 1 auto!important;min-width:0!important;width:1%!important;
+  height:100%!important;min-height:0!important;margin:0!important;
+  padding:0 14px!important;border:0!important;border-radius:12px 0 0 12px!important;
+  outline:0!important;box-shadow:none!important;background:transparent!important;
+  font:inherit!important;color:#173f56!important;box-sizing:border-box!important;
+}
+.mira-quote .mira-german-date button.mira-calendar-control {
+  appearance:none!important;-webkit-appearance:none!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  position:relative!important;flex:0 0 48px!important;width:48px!important;
+  min-width:48px!important;max-width:48px!important;
+  height:100%!important;min-height:0!important;max-height:none!important;
+  padding:0!important;margin:0!important;line-height:1!important;
+  border:0!important;border-left:1px solid #d8e8f0!important;border-radius:0 11px 11px 0!important;
+  background:#f2f9fc!important;color:#087aa7!important;box-shadow:none!important;
+  transform:none!important;cursor:pointer!important;
+}
+.mira-quote .mira-german-date button.mira-calendar-control:hover{background:#e6f5fa!important}
+.mira-quote .mira-german-date button.mira-calendar-control:focus-visible{outline:2px solid #087aa7!important;outline-offset:-3px!important}
+.mira-quote .mira-german-date button.mira-calendar-control::before,
+.mira-quote .mira-german-date button.mira-calendar-control::after{content:none!important;display:none!important}
+.mira-quote .mira-german-date button.mira-calendar-control svg {
+  display:block!important;position:static!important;width:21px!important;height:21px!important;
+  min-width:21px!important;min-height:21px!important;max-width:21px!important;max-height:21px!important;
+  margin:0!important;padding:0!important;transform:none!important;
+  fill:none!important;stroke:currentColor!important;stroke-width:1.9!important;
+  flex:none!important;pointer-events:none!important;
+}
+.mira-quote .mira-field-stack .mira-german-date input#mira-date-picker{
+  position:absolute!important;top:50%!important;left:auto!important;right:22px!important;
+  width:1px!important;height:1px!important;min-height:0!important;
+  margin:0!important;padding:0!important;border:0!important;
+  opacity:0!important;pointer-events:none!important;overflow:hidden!important;
+}
+/* Keep the floating summary comfortably clear of the site header on desktop. */
+@media(min-width:951px){.mira-quote .mira-summary-panel{top:132px!important}.mira-quote .mira-summary-sticky{max-height:calc(100vh - 152px)!important;max-height:calc(100dvh - 152px)!important}}
+@media(max-width:950px){.mira-quote .mira-summary-panel,.mira-quote .mira-summary-sticky{top:auto!important;max-height:none!important}}
+
+
+/* v1.2.5: Responsive in-page German date calendar: never uses native OS popup. */
+.mira-quote .mira-custom-calendar[hidden]{display:none!important}
+.mira-quote .mira-custom-calendar{
+ position:absolute!important; z-index:9999!important;top:calc(100% + 8px)!important;left:0!important;
+ width:100%!important;max-width:360px!important;min-width:0!important;box-sizing:border-box!important;
+ padding:12px!important;background:#fff!important;color:#153c52!important;
+ border:1px solid #d1e3ec!important;border-radius:14px!important;
+ box-shadow:0 16px 38px rgba(22,56,79,.19)!important;
+}
+.mira-quote .mira-cal-nav{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:8px!important;margin-bottom:12px!important}
+.mira-quote .mira-cal-nav strong{font-size:15px!important;text-transform:capitalize!important}
+.mira-quote .mira-cal-nav button{width:36px!important;height:36px!important;border:0!important;border-radius:9px!important;background:#eaf5f9!important;color:#0b7198!important;font-size:25px!important;line-height:1!important;cursor:pointer!important;padding:0!important}
+.mira-quote .mira-cal-grid{display:grid!important;grid-template-columns:repeat(7,minmax(0,1fr))!important;gap:3px!important;align-items:center!important;text-align:center!important}
+.mira-quote .mira-cal-weekday{font-size:11px!important;font-weight:700!important;color:#6a8290!important;padding:7px 0!important}
+.mira-quote .mira-cal-grid button{display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;aspect-ratio:1!important;min-height:33px!important;padding:0!important;margin:0!important;border:0!important;border-radius:8px!important;background:transparent!important;color:#143d55!important;font-size:13px!important;font-weight:600!important;cursor:pointer!important}
+.mira-quote .mira-cal-grid button:hover:not(:disabled){background:#dff3f9!important}
+.mira-quote .mira-cal-grid button.is-selected{background:#087fb1!important;color:white!important}
+.mira-quote .mira-cal-grid button.is-today:not(.is-selected){outline:1px solid #087fb1!important;outline-offset:-2px!important}
+.mira-quote .mira-cal-grid button:disabled,.mira-quote .mira-cal-nav button:disabled{opacity:.3!important;cursor:not-allowed!important}
+.mira-quote .mira-cal-footer{margin-top:9px!important;padding-top:8px!important;border-top:1px solid #edf2f5!important;text-align:right!important}
+.mira-quote .mira-cal-footer button{border:0!important;background:transparent!important;color:#087fb1!important;padding:7px 9px!important;font-size:13px!important;cursor:pointer!important}
+@media(max-width:450px){.mira-quote .mira-custom-calendar{max-width:100%!important;padding:10px!important}.mira-quote .mira-cal-grid button{min-height:30px!important}}
